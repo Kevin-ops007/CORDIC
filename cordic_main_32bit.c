@@ -21,7 +21,7 @@ void verify( int x_i_init, int y_i_init, int z_i_init,int x_i, int y_i, int z_i)
 
 void main( void) {
     int x_i_init, y_i_init, z_i_init; /* initial values*/
-    int x_i, y_i, z_i; /* integer (fixed-point) variables*/
+    int x_i, y_i, z_i, xy; /* integer (fixed-point) variables*/
     x_i = (x_i_init = 27852);
     y_i = (y_i_init = 24903);
     z_i_init = 23906;
