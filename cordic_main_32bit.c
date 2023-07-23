@@ -2,7 +2,7 @@
 #include <math.h>
 int z_table[15] = { 25735, 15192, 8027, 4074, 2045, 1023,511, 255, 127, 63, 31, 15, 7, 3, 1};
 
-void cordic_V_fixed_point( int *x, int *y, int *z); /* defined elsewhere*/
+void cordic_V_fixed_point( int *xy, int *z); /* defined elsewhere*/
 
 void verify( int x_i_init, int y_i_init, int z_i_init,int x_i, int y_i, int z_i) {
     double x_d_init, y_d_init, z_d_init, x_d, y_d, z_d;
