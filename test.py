@@ -21,20 +21,18 @@ def main():
         sys.stdout = devnull
         start_perf = time.perf_counter()
         start_process = time.perf_counter()
-        
+
         for i in range(num_iterations):
             subprocess.Popen([exe])
         end_perf = time.perf_counter()
         end_process = time.process_time()
 
-        try:
-            yield
-        finally:
-            sys.stdout = old_stdout
 
-    avg_perf_ms = end_perf / num_iterations * 1000      
-    avg_proces_ms = end_process / num_iterations * 1000
 
+    avg_perf_ms = (end_perf - start_perf) / num_iterations * 1000      
+    avg_proces_ms = (end_process - start_process) / num_iterations * 1000
+
+    sys.stdout = sys.__stdout__
     print(f'Average perf time: {avg_perf_ms} ms')
     print(f'Average process time: {avg_proces_ms} ms')
 
