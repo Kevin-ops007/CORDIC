@@ -3,7 +3,6 @@ import time
 import sys
 import os
 
-
 def main():
     argv = sys.argv
     if(len(argv) != 3):
@@ -15,7 +14,7 @@ def main():
         print(f'file {exe} does not exist')
         exit(1)
     
-    num_iterations = argv[2]
+    num_iterations = int(argv[2])
 
     start_perf = time.perf_counter()
     start_process = time.perf_counter()
