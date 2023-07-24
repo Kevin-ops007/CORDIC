@@ -19,7 +19,7 @@ def main():
     start_perf = time.perf_counter()
     start_process = time.perf_counter()
     for i in range(num_iterations):
-        subprocess.run([exe])
+        subprocess.Popen([exe])
 
     end_perf = time.perf_counter()
     end_process = time.process_time()
