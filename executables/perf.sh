@@ -7,7 +7,7 @@
 for filename in *.exe; do
     if [ -f "$filename" ]; then
         echo "Running perf for file: $filename"
-        perf "$filename" >> stats.txt
+        perf stat "$filename" >> stats.txt
         echo "perf for file $filename completed."
     fi
 done
