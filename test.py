@@ -16,16 +16,16 @@ def main():
     
     num_iterations = int(argv[2])
 
-    with open(os.devnull, "w") as devnull:
-        old_stdout = sys.stdout
-        sys.stdout = devnull
-        start_perf = time.perf_counter()
-        start_process = time.perf_counter()
+    f = open(os.devnull, 'w')
+    sys.stdout = f
 
-        for i in range(num_iterations):
-            subprocess.Popen([exe])
-        end_perf = time.perf_counter()
-        end_process = time.process_time()
+    start_perf = time.perf_counter()
+    start_process = time.process_time()
+
+    for i in range(num_iterations):
+        subprocess.Popen([exe])
+    end_perf = time.perf_counter()
+    end_process = time.process_time()
 
 
 
@@ -36,6 +36,7 @@ def main():
     print(f'Average perf time: {avg_perf_ms} ms')
     print(f'Average process time: {avg_proces_ms} ms')
 
+    f.close()
 
 
 if __name__ == '__main__':
