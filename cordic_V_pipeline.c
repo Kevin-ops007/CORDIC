@@ -7,6 +7,7 @@ void cordic_V_fixed_point( int *x, int *y, int *z) {
     int i;
     x_temp_1 = *x;
     y_temp_1 = *y;
+    z_temp = 0;
     /* loop prologue*/
     if( y_temp_1 > 0) {
         x_temp_2 = x_temp_1 + (y_temp_1 >> i);
@@ -18,7 +19,7 @@ void cordic_V_fixed_point( int *x, int *y, int *z) {
         y_temp_2 = y_temp_1 + (x_temp_1 >> i);
         z_temp -= z_table[i];
     }
-    z_temp = 0;
+
     /* loop body*/
     for( i=0; i<14; i++) { /* 14 iterations are needed */
         x_temp_1 = x_temp_2;
