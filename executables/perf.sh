@@ -6,8 +6,10 @@
 # Loop through all .exe files in the current directory and run "perf <filename>"
 for filename in *.exe; do
     if [ -f "$filename" ]; then
+        file="${filename%.exe}"
         echo "Running perf for file: $filename"
-        perf stat "$filename" >> stats.txt
+        echo "Running perf for file : $filename" >> stats.txt
+        perf stat -o "$file".txt ./"$filename" >> stats.txt
         echo "perf for file $filename completed."
     fi
 done

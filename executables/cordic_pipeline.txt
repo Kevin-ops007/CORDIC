@@ -1,0 +1,20 @@
+# started on Mon Jul 24 01:00:23 2023
+
+
+ Performance counter stats for './cordic_pipeline.exe':
+
+         45.792608      task-clock (msec)         #    0.870 CPUs utilized          
+                 0      context-switches          #    0.000 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                45      page-faults               #    0.983 K/sec                  
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+       0.052653271 seconds time elapsed
+
+       0.000000000 seconds user
+       0.000000000 seconds sys
+
+

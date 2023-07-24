@@ -1,0 +1,84 @@
+Running perf for file : cordic_32bit.exe
+Vectoring CORDIC:
+
+x_i_init = 27852	x_d_init = 0.849976
+y_i_init = 24903	y_d_init = 0.759979
+z_i_init = 23906	z_d_init = 0.729553 (rad)
+
+x_i_calc = 61526	x_d_calc = 0.000000
+y_i_calc =     3	y_d_calc = 0.000000
+z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Running perf for file : cordic_O1.exe
+Vectoring CORDIC:
+
+x_i_init = 27852	x_d_init = 0.849976
+y_i_init = 24903	y_d_init = 0.759979
+z_i_init = 23906	z_d_init = 0.729553 (rad)
+
+x_i_calc = 61526	x_d_calc = 0.000000
+y_i_calc =     3	y_d_calc = 0.000000
+z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Running perf for file : cordic_O2.exe
+Vectoring CORDIC:
+
+x_i_init = 27852	x_d_init = 0.849976
+y_i_init = 24903	y_d_init = 0.759979
+z_i_init = 23906	z_d_init = 0.729553 (rad)
+
+x_i_calc = 61526	x_d_calc = 0.000000
+y_i_calc =     3	y_d_calc = 0.000000
+z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Running perf for file : cordic_O3.exe
+Vectoring CORDIC:
+
+x_i_init = 27852	x_d_init = 0.849976
+y_i_init = 24903	y_d_init = 0.759979
+z_i_init = 23906	z_d_init = 0.729553 (rad)
+
+x_i_calc = 61526	x_d_calc = 0.000000
+y_i_calc =     3	y_d_calc = 0.000000
+z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Running perf for file : cordic_pipeline.exe
+Vectoring CORDIC:
+
+x_i_init = 27852	x_d_init = 0.849976
+y_i_init = 24903	y_d_init = 0.759979
+z_i_init = 23906	z_d_init = 0.729553 (rad)
+
+x_i_calc = 87013	x_d_calc = 0.000000
+y_i_calc =    -9	y_d_calc = 0.000000
+z_i_calc = -1824	z_d_calc = 0.000000 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Running perf for file : cordic_ternary.exe
+Vectoring CORDIC:
+
+x_i_init = 27852	x_d_init = 0.849976
+y_i_init = 24903	y_d_init = 0.759979
+z_i_init = 23906	z_d_init = 0.729553 (rad)
+
+x_i_calc = 61526	x_d_calc = 0.000000
+y_i_calc =     3	y_d_calc = 0.000000
+z_i_calc = 57109	z_d_calc = 0.000000 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Running perf for file : cordic_unrolled.exe
+Vectoring CORDIC:
+
+x_i_init = 27852	x_d_init = 0.849976
+y_i_init = 24903	y_d_init = 0.759979
+z_i_init = 23906	z_d_init = 0.729553 (rad)
+
+x_i_calc = 85345	x_d_calc = 0.000000
+y_i_calc = -73663	y_d_calc = 0.000000
+z_i_calc = 47231	z_d_calc = 0.000000 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
