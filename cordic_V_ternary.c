@@ -11,13 +11,13 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     int sign = 0;
 
     for (int i = 0; i < 15; i++)
-    { 
+    {
         /* 15 iterations are needed */
         sign = y_temp_1 > 0 ? 1 : -1;
 
-        x_temp_2 = x_temp_1 +(sign*(y_temp_1 >> i));
-        y_temp_2 = y_temp_1 -(sign*(x_temp_1 >> i));
-        z_temp += z_table[i];
+        x_temp_2 = x_temp_1 + (sign * (y_temp_1 >> i));
+        y_temp_2 = y_temp_1 - (sign * (x_temp_1 >> i));
+        z_temp += sign * z_table[i];
 
         x_temp_1 = x_temp_2;
         y_temp_1 = y_temp_2;
