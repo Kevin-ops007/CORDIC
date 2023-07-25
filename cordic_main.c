@@ -4,7 +4,7 @@ int z_table[15] = { 25735, 15192, 8027, 4074, 2045, 1023,511, 255, 127, 63, 31, 
 
 void cordic_V_fixed_point( int *x, int *y, int *z); /* defined elsewhere*/
 
-void verify( int x_i_init, int y_i_init, int z_i_init,int x_i, int y_i, int z_i) {
+void verify( int x_i_init, int y_i_init, int z_i_init,short x_i, short y_i, short z_i) {
     double x_d_init, y_d_init, z_d_init, x_d, y_d, z_d;
     x_d_init = (double)x_i_init / ( 1 << 15); /* float image of x_*/
     y_d_init = (double)y_i_init / ( 1 << 15); /* float image of y_*/
@@ -24,7 +24,7 @@ void verify( int x_i_init, int y_i_init, int z_i_init,int x_i, int y_i, int z_i)
 
 void main( void) {
     int x_i_init, y_i_init, z_i_init; /* initial values*/
-    int x_i, y_i, z_i; /* integer (fixed-point) variables*/
+    short x_i, y_i, z_i; /* integer (fixed-point) variables*/
     x_i = (x_i_init = 27852);
     y_i = (y_i_init = 24903);
     z_i_init = 23906;
