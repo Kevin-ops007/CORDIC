@@ -28,8 +28,8 @@ void main( void) {
     x_i = (x_i_init = 27852);
     y_i = (y_i_init = 24903);
     z_i_init = 23906;
-    x_i = x_i << 4;
-    y_i = y_i << 4;
+    x_i = x_i << 3;
+    y_i = y_i << 3;
     printf( "Vectoring CORDIC:\n\n");
     cordic_V_fixed_point( &x_i, &y_i, &z_i);
     verify( x_i_init, y_i_init, z_i_init, x_i, y_i, z_i);
