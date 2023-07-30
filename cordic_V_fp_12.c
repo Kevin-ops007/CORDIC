@@ -14,8 +14,8 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     y_temp_1 = *y;
     z_temp = 0;
 
-    for (int i = 0; i < 15; i++)
-    { /* 15 iterations are needed */
+    for (int i = 0; i < 11; i++)
+    { /* 11 iterations are needed */
         if (y_temp_1 > 0)
         {
             x_temp_2 = x_temp_1 + (y_temp_1 >> i);

@@ -10,7 +10,7 @@ void verify(int x_i_init, int y_i_init, int z_i_init, int x_i, int y_i, int z_i)
     x_d_init = (double)x_i_init / (1 << 11); /* float image of x_*/
     y_d_init = (double)y_i_init / (1 << 11); /* float image of y_*/
     z_d_init = (double)z_i_init / (1 << 11); /* float image of z_*/
-    x_d = (double)x_i / (1 << 11);           /* float image of x_i*/
+    x_d = (double)x_i / (1 << 22);           /* float image of x_i*/
     y_d = (double)y_i / (1 << 11);           /* float image of y_i*/
     z_d = (double)z_i / (1 << 11);           /* float image of z_i*/
     printf("x_i_init = %5i\tx_d_init = %f\n", x_i_init, x_d_init);
