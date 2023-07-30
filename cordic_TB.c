@@ -30,13 +30,22 @@ int main(void)
     printf("z_d = %f\t\t\tz_i = %i\n", z_d, z_i);
     printf("\nThe angle table:\n");
     printf("16 bit samples\n");
-    for (int i = 0; i < 15; i++)
+    for (int i = 0; i < 15; ++i)
     {
         printf("z[%2i] = %i\n", i, (int)(atan(pow(2.0, (double)(-i))) * (1 << 15)));
     }
     printf("12 bit samples\n");
-    for (int i = 0; i < 15; i++)
+    for (int i = 0; i < 15; ++i)
     {
         printf("z[%2i] = %i\n", i, (int)(atan(pow(2.0, (double)(-i))) * (1 << 11)));
     }
+    double scale = 1.0;
+    for (int i = 0; i < 16; ++i)
+    {
+        scale *= sqrt(1 + pow(2.0, -2.0 * i));
+    }
+    printf("scale (double): %f\n", scale);
+    printf("1/scale (double): %f\n", 1.0 / scale);
+    printf("(int)(1/scale) * (1 << 15): %d\n", (int)((1.0 / scale) * (1 << 15)));
+    printf("(int)(1/scale) * (1 << 11): %d\n", (int)((1.0 / scale) * (1 << 11)));
 }
