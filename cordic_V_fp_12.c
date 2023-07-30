@@ -1,3 +1,4 @@
+#include <stdio.h>
 int z_table[15];
 
 void cordic_V_fixed_point(int *x, int *y, int *z)
