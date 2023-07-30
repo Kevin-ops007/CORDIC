@@ -30,6 +30,9 @@ void main(void)
     x_i = (x_i_init = 1740);
     y_i = (y_i_init = 1556);
     z_i_init = 1494;
+    // from TB:
+    // with x_i = 1740, y_i = 1556
+    // we expect z_i = 1494
     printf("Vectoring CORDIC:\n\n");
     cordic_V_fixed_point(&x_i, &y_i, &z_i);
     verify(x_i_init, y_i_init, z_i_init, x_i, y_i, z_i);
