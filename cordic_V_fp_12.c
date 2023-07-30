@@ -34,7 +34,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
 
     // multiply by the inverse of 1.6...... to get correct magnitude
     printf("before multiplying: %d\n", x_temp_1);
-    x_temp_1 *= 1243;
+    x_temp_1 *= 1244;
 
     *x = x_temp_1;
     *y = y_temp_1;

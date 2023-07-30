@@ -46,6 +46,6 @@ int main(void)
     }
     printf("scale (double): %f\n", scale);
     printf("1/scale (double): %f\n", 1.0 / scale);
-    printf("(int)(1/scale) * (1 << 15): %d\n", (int)((1.0 / scale) * (1 << 15)));
-    printf("(int)(1/scale) * (1 << 11): %d\n", (int)((1.0 / scale) * (1 << 11)));
+    printf("(int)(1/scale) * (1 << 15): %d\n", (int)((1.0 / scale) * (1 << 15) + 0.5));
+    printf("(int)(1/scale) * (1 << 11): %d\n", (int)((1.0 / scale) * (1 << 11) + 0.5));
 }
