@@ -1,4 +1,4 @@
-int z_table[15];
+int z_table[11];
 
 void cordic_V_fixed_point(int *x, int *y, int *z)
 {
