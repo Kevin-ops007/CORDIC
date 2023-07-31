@@ -15,9 +15,9 @@ for c_file in "${c_files[@]}"; do
 
     # Skip cordic_V_32bit.c
     if [[ $c_file!="cordic_V_32bit.c" ]]; then
-        echo "COMPILING $c_file"
-        # Compile the files with GCC
-        gcc -O3 "$main_file" "$c_file" -o "$output_executable" -lm
+        # Generate the output executable name
+        echo "COMPILING 32bit $c_file"
+        gcc -O3 cordic_main_32bit.c cordic_V_32bit.c -o cordic_32bit.exe -lm
         gcc -O3 -S "$c_file" -o "$arm_code"
     elif [[ $c_file=="cordic_V_neon.c" ]]; then
         echo "SKIPPING NEON FOR NOW"
@@ -25,9 +25,9 @@ for c_file in "${c_files[@]}"; do
         # gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" -lm   
         # gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "arm_code"
     else
-        # Generate the output executable name
-        echo "COMPILING 32bit $c_file"
-        gcc -O3 cordic_main_32bit.c cordic_V_32bit.c -o cordic_32bit.exe -lm
+        echo "COMPILING $c_file"
+        # Compile the files with GCC
+        gcc -O3 "$main_file" "$c_file" -o "$output_executable" -lm
         gcc -O3 -S "$c_file" -o "$arm_code"
         
     fi
