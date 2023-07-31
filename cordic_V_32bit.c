@@ -9,6 +9,10 @@ void cordic_V_fixed_point(int *xy, int *z)
     // unpack x and y as 12 bit samples
     x_temp_1 = *xy & 0xfff;
     y_temp_1 = (*xy >> 16) & 0xfff;
+
+    x_temp_1 = x_temp_1 << 2;
+    y_temp_1 = y_temp_1 << 2;
+
     z_temp = 0;
     for (int i = 0; i < 11; i++)
     { /* 11 iterations are needed */
