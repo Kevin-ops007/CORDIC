@@ -11,9 +11,9 @@ int main(void)
 
     // 16 bit samples
     printf("16 bit samples\n");
-    x_i = (int)(x_d * (1 << 15)); /* convert the x_d, y_d, z_d */
-    y_i = (int)(y_d * (1 << 15)); /* floats to integers with a */
-    z_i = (int)(z_d * (1 << 15)); /* precision of 16 bits */
+    x_i = (int)(x_d * (1 << 15) + 0.5); /* convert the x_d, y_d, z_d */
+    y_i = (int)(y_d * (1 << 15) + 0.5); /* floats to integers with a */
+    z_i = (int)(z_d * (1 << 15) + 0.5); /* precision of 16 bits */
     printf("x_d = %f\t\t\tx_i = %i\n", x_d, x_i);
     printf("y_d = %f\t\t\ty_i = %i\n", y_d, y_i);
     printf("z_d = %f\t\t\tz_i = %i\n", z_d, z_i);
@@ -22,9 +22,9 @@ int main(void)
     // with 12 bit samples, have 11 bits of magnitude
     // so SF = 2^11/2^0 = 2^11
     printf("12 bit samples\n");
-    x_i = (int)(x_d * (1 << 11)); /* convert the x_d, y_d, z_d */
-    y_i = (int)(y_d * (1 << 11)); /* floats to integers with a */
-    z_i = (int)(z_d * (1 << 11)); /* precision of 12 bits */
+    x_i = (int)(x_d * (1 << 11) + 0.5); /* convert the x_d, y_d, z_d */
+    y_i = (int)(y_d * (1 << 11) + 0.5); /* floats to integers with a */
+    z_i = (int)(z_d * (1 << 11) + 0.5); /* precision of 12 bits */
     printf("x_d = %f\t\t\tx_i = %i\n", x_d, x_i);
     printf("y_d = %f\t\t\ty_i = %i\n", y_d, y_i);
     printf("z_d = %f\t\t\tz_i = %i\n", z_d, z_i);

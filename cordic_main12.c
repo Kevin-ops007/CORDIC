@@ -19,8 +19,13 @@ void verify(int x_i_init, int y_i_init, int z_i_init, int x_i, int y_i, int z_i)
     printf("x_i_calc = %5i\tx_d_calc = %f\n", x_i, x_d);
     printf("y_i_calc = %5i\ty_d_calc = %f\n", y_i, y_d);
     printf("z_i_calc = %5i\tz_d_calc = %f (rad)\n\n", z_i, z_d);
-    printf("Modulus = SQRT(x_d_init^2 + y_d_init^2) = %f\t(expected)\n", sqrt(x_d_init * x_d_init + y_d_init * y_d_init));
+
+    double mag = sqrt(x_d_init * x_d_init + y_d_init * y_d_init);
+    printf("Modulus = SQRT(x_d_init^2 + y_d_init^2) = %f\t(expected)\n", mag);
     printf("Modulus = SQRT(x_d^2 + y_d^2) = %f\t(result)\n", sqrt(x_d * x_d + y_d * y_d));
+
+    printf("float error in x (mag): %d\n", abs(x_d - mag));
+    printf("float error in z (arctan): %d\n", abs(z_d - z_d_init));
 }
 
 void main(void)

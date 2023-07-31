@@ -39,8 +39,8 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     // 1243 may be more precise
     x_temp_1 *= 1244;
 
-    // x_temp_1 = x_temp_1 >> 2; // scale factor back to 2^11
-    // y_temp_1 = y_temp_1 >> 2; // scale factor back to 2^11
+    x_temp_1 = (x_temp_1 + 1) >> 2; // scale factor back to 2^11
+    y_temp_1 = (y_temp_1 + 1) >> 2; // scale factor back to 2^11
 
     *x = x_temp_1;
     *y = y_temp_1;
