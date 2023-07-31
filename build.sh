@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Compile main file name
-main_file="cordic_main16.c"
+main_file="cordic_main12.c"
 
 # Get a list of all C files with the pattern cordic_V_*.c in the current directory
 c_files=(cordic_V_*.c)
