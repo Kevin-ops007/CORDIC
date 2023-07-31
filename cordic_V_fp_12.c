@@ -1,5 +1,5 @@
 #include <stdio.h>
-int z_table[15];
+int z_table[11];
 
 void cordic_V_fixed_point(int *x, int *y, int *z)
 {
@@ -35,7 +35,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     // magnitude growth from algorithm
     // scale factor for x becomes 2^11 * 2^11 = 2^22
     // float x = x / 2^22
-    x_temp_1 *= 1243;
+    x_temp_1 *= 1244;
     x_temp_1 = (x_temp_1 + 1) >> 2; // scale factor back to 2^11
     y_temp_1 = (y_temp_1 + 1) >> 2; // scale factor back to 2^11
 

@@ -21,7 +21,7 @@ int main(void)
     printf("z_d = %f\t\t\tz_i = %i\n", z_d, z_i);
     printf("\nThe angle table:\n");
     printf("12 bit samples\n");
-    for (int i = 0; i < 15; ++i)
+    for (int i = 0; i < 11; ++i)
     {
         printf("z[%2i] = %i\n", i, (int)(atan(pow(2.0, (double)(-i))) * (1 << 11)));
     }
