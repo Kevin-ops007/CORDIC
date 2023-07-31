@@ -12,6 +12,8 @@ for c_file in "${c_files[@]}"; do
     name=${name%.c}
     output_executable="cordic_$name.exe"
     arm_code="cordic_$name.s"
+    
+    echo "COMPILING $c_file"
 
     # Skip cordic_V_32bit.c
     if [[ $c_file != "cordic_V_32bit.c" ]]; then
@@ -19,6 +21,7 @@ for c_file in "${c_files[@]}"; do
         gcc -O3 "$main_file" "$c_file" -o "$output_executable" -lm
         gcc -O3 -S "$c_file" -o "$arm_code"
     elif [[ $c_file == "cordic_V_neon.c" ]]; then
+        echo "SKIPPING NEON FOR NOW"
         # Do nothing until Neon is fixed
         # gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" -lm   
         # gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "arm_code"
@@ -38,4 +41,6 @@ mv *.s ./assembly
 mv *.exe ./executables
 
 cd executables
+
+echo "RUNNING PERF NOW"
 ./perf.sh
