@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
+
 int z_table[11] = {1608, 949, 501, 254, 127, 63, 31, 15, 7, 3, 1};
 
 void cordic_V_fixed_point(int *xy, int *z); /* defined elsewhere*/
