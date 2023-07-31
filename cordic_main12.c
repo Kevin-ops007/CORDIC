@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 int z_table[15] = {1608, 949, 501, 254, 127, 63, 31, 15, 7, 3, 1, 0, 0, 0, 0};
 
