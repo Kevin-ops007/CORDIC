@@ -9,6 +9,7 @@ c_files=(cordic_V_*.c)
 for c_file in "${c_files[@]}"; do
     # Extract the part after "cordic_V_" from the C file name
     name=${c_file#cordic_V_}
+    name=${name%.c}
     output_executable="cordic_$name.exe"
     arm_code="cordic_$name.s"
 
@@ -17,10 +18,10 @@ for c_file in "${c_files[@]}"; do
         # Compile the files with GCC
         gcc -O3 "$main_file" "$c_file" -o "$output_executable" -lm
         gcc -O3 -S "$c_file" -o "$arm_code"
-
-    # elif [[ $c_file == "cordic_V_neon.c" ]]; then
-    #     gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" -lm   
-    #     gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "arm_code"
+    elif [[ $c_file == "cordic_V_neon.c" ]]; then
+        # Do nothing until Neon is fixed
+        # gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" -lm   
+        # gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "arm_code"
     else
         # Generate the output executable name
         gcc -O3 cordic_main_32bit.c cordic_V_32bit.c -o cordic_32bit.exe -lm
