@@ -14,7 +14,7 @@ for c_file in "${c_files[@]}"; do
     arm_code="cordic_$name.s"
 
     # Skip cordic_V_32bit.c
-    if [[ $c_file!="cordic_V_32bit.c" ]]; then
+    if [[ $c_file=="cordic_V_32bit.c" ]]; then
         # Generate the output executable name
         echo "COMPILING 32bit $c_file"
         gcc -O3 cordic_main_32bit.c cordic_V_32bit.c -o cordic_32bit.exe -lm
