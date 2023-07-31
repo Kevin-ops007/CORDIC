@@ -41,7 +41,7 @@ void main(void)
     xy = y_i_init << 16 | x_i_init;
     printf("Vectoring CORDIC:\n\n");
     cordic_V_fixed_point(&xy, &z_i);
-    x_i = xy & 0xffff;
-    y_i = (xy >> 16) & 0xffff;
+    x_i = xy & 0xfff;
+    y_i = (xy >> 16) & 0xfff;
     verify(x_i_init, y_i_init, z_i_init, x_i, y_i, z_i);
 }

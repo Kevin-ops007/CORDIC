@@ -7,8 +7,8 @@ void cordic_V_fixed_point(int *xy, int *z)
     int x_temp_2, y_temp_2;
     int i;
     // unpack x and y as 12 bit samples
-    x_temp_1 = *xy & 0xffff;
-    y_temp_1 = (*xy >> 16) & 0xffff;
+    x_temp_1 = *xy & 0xfff;
+    y_temp_1 = (*xy >> 16) & 0xfff;
 
     x_temp_1 = x_temp_1 << 2;
     y_temp_1 = y_temp_1 << 2;
