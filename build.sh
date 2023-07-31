@@ -18,13 +18,13 @@ for c_file in "${c_files[@]}"; do
         gcc -O3 "$main_file" "$c_file" -o "$output_executable" -lm
         gcc -O3 -S "$c_file" -o "$arm_code"
 
-    elif [[ $c_file == "cordic_V_neon.c" ]]; then
-        gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" -lm   
-        gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "arm_code"
-    # else
-    #     # Generate the output executable name
-    #     gcc -O3 cordic_main_32bit.c cordic_V_32bit.c -o cordic_32bit.exe -lm
-    #     gcc -O3 -S "$c_file" -o "$arm_code"
+    # elif [[ $c_file == "cordic_V_neon.c" ]]; then
+    #     gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" -lm   
+    #     gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "arm_code"
+    else
+        # Generate the output executable name
+        gcc -O3 cordic_main_32bit.c cordic_V_32bit.c -o cordic_32bit.exe -lm
+        gcc -O3 -S "$c_file" -o "$arm_code"
         
     fi
 done
