@@ -17,9 +17,10 @@ void main(void)
 
     for (int i = 0; i < 4; ++i)
     {
-        x_i = x[i];
-        y_i = y[i];
+        x_i = (int)(x[i] * (1 << 11) + 0.5);
+        y_i = (int)(y[i] * (1 << 11) + 0.5);
         z_i = 0;
+
         cordic_V_fixed_point(&x_i, &y_i, &z_i);
     }
 }
