@@ -16,7 +16,7 @@ int main(void)
     double x[4] = {0.5, 0.87, -0.2, -0.7};
     double y[4] = {0.5, 0.34, 0.45, 0.1};
 
-    clock_t start = clock(), diff;
+    // clock_t start = clock(), diff;
     for (int i = 0; i < 1000; ++i)
     {
         x_i = (int)(x[i % 4] * (1 << 11) + 0.5);
@@ -25,9 +25,9 @@ int main(void)
 
         cordic_V_fixed_point(&x_i, &y_i, &z_i);
     }
-    diff = clock() - start;
-    int msec = diff * 1000 / CLOCKS_PER_SEC;
-    printf("Time taken %d seconds %d milliseconds\n", msec / 1000, msec % 1000);
+    // diff = clock() - start;
+    // int msec = diff * 1000 / CLOCKS_PER_SEC;
+    // printf("Time taken %d seconds %d milliseconds\n", msec / 1000, msec % 1000);
 
     return 0;
 }
