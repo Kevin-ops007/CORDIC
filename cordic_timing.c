@@ -26,7 +26,7 @@ int main(void)
         cordic_V_fixed_point(&x_i, &y_i, &z_i);
     }
     diff = clock() - start;
-    int msec = diff * 100 / CLOCKS_PER_SEC;
+    int msec = diff * 1000 / CLOCKS_PER_SEC;
     printf("Time taken %d seconds %d milliseconds\n", msec / 1000, msec % 1000);
 
     return 0;
