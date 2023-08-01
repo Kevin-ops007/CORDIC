@@ -23,4 +23,6 @@ void main(void)
 
         cordic_V_fixed_point(&x_i, &y_i, &z_i);
     }
+
+    return 0;
 }
