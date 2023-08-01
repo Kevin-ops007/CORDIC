@@ -17,7 +17,7 @@ for c_file in "${c_files[@]}"; do
     if [[ $c_file == "cordic_V_32bit.c" ]]; then
         # Generate the output executable name
         echo "COMPILING 32bit $c_file"
-        gcc -O3 cordic_main_32bit.c cordic_V_32bit.c -o cordic_32bit.exe -lm
+        gcc -O3 cordic_main_32bit_no_io.c cordic_V_32bit.c -o cordic_32bit.exe -lm
         gcc -O3 -S "$c_file" -o "$arm_code"
     elif [[ $c_file == "cordic_V_neon.c" ]]; then
         echo "SKIPPING NEON FOR NOW"
