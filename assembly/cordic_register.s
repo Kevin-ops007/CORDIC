@@ -9,7 +9,7 @@
 	.eabi_attribute 30, 2
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
-	.file	"cordic_V_pipeline.c"
+	.file	"cordic_V_register.c"
 	.text
 	.align	2
 	.global	cordic_V_fixed_point
@@ -21,17 +21,13 @@
 cordic_V_fixed_point:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, r7, lr}
-	mov	r5, #0
-	ldr	ip, [r1]
-	ldr	lr, [r0]
-	cmp	ip, #0
-	addgt	r3, lr, ip, asr r5
-	suble	r3, lr, ip, asr r5
-	subgt	r5, ip, lr, asr r5
-	addle	r5, ip, lr, asr r5
 	movw	ip, #:lower16:z_table
+	push	{r4, r5, r6, r7, lr}
+	ldr	r5, [r1]
+	ldr	r3, [r0]
 	movt	ip, #:upper16:z_table
+	lsl	r5, r5, #2
+	lsl	r3, r3, #2
 	ldr	r4, [ip]
 	cmp	r5, #0
 	addgt	lr, r3, r5
@@ -118,62 +114,37 @@ cordic_V_fixed_point:
 	addgt	lr, lr, r7
 	suble	lr, lr, r7
 	asr	r6, lr, #9
-	asr	r7, r3, #9
 	addgt	r4, r4, r5
 	suble	r4, r4, r5
 	cmp	r3, #0
 	ldr	r5, [ip, #36]
+	asr	r7, r3, #9
+	ldr	ip, [ip, #40]
 	subgt	r3, r3, r6
 	addle	r3, r3, r6
 	addgt	lr, lr, r7
-	suble	lr, lr, r7
-	asr	r6, lr, #10
-	asr	r7, r3, #10
 	addgt	r4, r4, r5
+	suble	lr, lr, r7
 	suble	r4, r4, r5
 	cmp	r3, #0
-	ldr	r5, [ip, #40]
-	subgt	r3, r3, r6
-	addle	r3, r3, r6
-	addgt	lr, lr, r7
-	suble	lr, lr, r7
-	asr	r6, lr, #11
-	asr	r7, r3, #11
-	addgt	r4, r4, r5
-	suble	r4, r4, r5
-	cmp	r3, #0
-	ldr	r5, [ip, #44]
-	subgt	r3, r3, r6
-	addle	r3, r3, r6
-	addgt	lr, lr, r7
-	suble	lr, lr, r7
-	asr	r6, lr, #12
-	asr	r7, r3, #12
-	addgt	r4, r4, r5
-	suble	r4, r4, r5
-	cmp	r3, #0
-	ldr	r5, [ip, #48]
-	addgt	lr, lr, r7
-	ldr	ip, [ip, #52]
-	subgt	r3, r3, r6
-	suble	lr, lr, r7
-	addle	r3, r3, r6
-	asr	r6, r3, #13
-	addgt	r4, r4, r5
-	suble	r4, r4, r5
-	cmp	r3, #0
-	asr	r5, lr, #13
-	subgt	r3, r3, r5
-	addgt	lr, r6, lr
 	addgt	ip, ip, r4
-	suble	lr, lr, r6
-	addle	r3, r5, r3
 	suble	ip, r4, ip
+	movw	r4, #1244
+	asr	r6, r3, #10
+	asr	r5, lr, #10
+	addgt	lr, r6, lr
+	suble	lr, lr, r6
+	mul	lr, r4, lr
+	subgt	r3, r3, r5
+	addle	r3, r5, r3
+	add	r3, r3, #1
+	asr	r3, r3, #2
+	asr	lr, lr, #13
 	str	lr, [r0]
 	str	r3, [r1]
 	str	ip, [r2]
 	pop	{r4, r5, r6, r7, pc}
 	.size	cordic_V_fixed_point, .-cordic_V_fixed_point
-	.comm	z_table,60,4
+	.comm	z_table,44,4
 	.ident	"GCC: (GNU) 8.2.1 20180801 (Red Hat 8.2.1-2)"
 	.section	.note.GNU-stack,"",%progbits

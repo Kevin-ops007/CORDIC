@@ -1,84 +1,176 @@
 Running perf for file : cordic_32bit.exe
 Vectoring CORDIC:
 
-x_i_init = 27852	x_d_init = 0.849976
-y_i_init = 24903	y_d_init = 0.759979
-z_i_init = 23906	z_d_init = 0.729553 (rad)
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
 
-x_i_calc = 61526	x_d_calc = 0.000000
-y_i_calc =     3	y_d_calc = 0.000000
-z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
-Running perf for file : cordic_O1.exe
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
 Vectoring CORDIC:
 
-x_i_init = 27852	x_d_init = 0.849976
-y_i_init = 24903	y_d_init = 0.759979
-z_i_init = 23906	z_d_init = 0.729553 (rad)
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
 
-x_i_calc = 61526	x_d_calc = 0.000000
-y_i_calc =     3	y_d_calc = 0.000000
-z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
-Running perf for file : cordic_O2.exe
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
 Vectoring CORDIC:
 
-x_i_init = 27852	x_d_init = 0.849976
-y_i_init = 24903	y_d_init = 0.759979
-z_i_init = 23906	z_d_init = 0.729553 (rad)
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
 
-x_i_calc = 61526	x_d_calc = 0.000000
-y_i_calc =     3	y_d_calc = 0.000000
-z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
-Running perf for file : cordic_O3.exe
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
 Vectoring CORDIC:
 
-x_i_init = 27852	x_d_init = 0.849976
-y_i_init = 24903	y_d_init = 0.759979
-z_i_init = 23906	z_d_init = 0.729553 (rad)
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
 
-x_i_calc = 61526	x_d_calc = 0.000000
-y_i_calc =     3	y_d_calc = 0.000000
-z_i_calc = 23901	z_d_calc = 0.000000 (rad)
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
+Vectoring CORDIC:
+
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
+
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
+Vectoring CORDIC:
+
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
+
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
+Vectoring CORDIC:
+
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
+
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
+Vectoring CORDIC:
+
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
+
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
+Vectoring CORDIC:
+
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
+
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
+Vectoring CORDIC:
+
+unpacked x: 1740   y: 1556
+after x: 2334     y: 2
+xy: 2091E  (133406)
+x_i_init =  1740	x_d_init = 0.849609
+y_i_init =  1556	y_d_init = 0.759766
+z_i_init =  1494	z_d_init = 0.729492 (rad)
+
+x_i_calc =  2334	x_d_calc = 1.139648
+y_i_calc =     2	y_d_calc = 0.000977
+z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+
+Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
+Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
+float error in x (mag): 0.000123
+float error in z (arctan): 0.001465
 Running perf for file : cordic_pipeline.exe
-Vectoring CORDIC:
-
-x_i_init = 27852	x_d_init = 0.849976
-y_i_init = 24903	y_d_init = 0.759979
-z_i_init = 23906	z_d_init = 0.729553 (rad)
-
-x_i_calc = 87013	x_d_calc = 0.000000
-y_i_calc =    -9	y_d_calc = 0.000000
-z_i_calc = -1824	z_d_calc = 0.000000 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
+Running perf for file : cordic_register.exe
+Running perf for file : cordic_standard.exe
 Running perf for file : cordic_ternary.exe
-Vectoring CORDIC:
-
-x_i_init = 27852	x_d_init = 0.849976
-y_i_init = 24903	y_d_init = 0.759979
-z_i_init = 23906	z_d_init = 0.729553 (rad)
-
-x_i_calc = 61526	x_d_calc = 0.000000
-y_i_calc =     3	y_d_calc = 0.000000
-z_i_calc = 57109	z_d_calc = 0.000000 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187
 Running perf for file : cordic_unrolled.exe
-Vectoring CORDIC:
-
-x_i_init = 27852	x_d_init = 0.849976
-y_i_init = 24903	y_d_init = 0.759979
-z_i_init = 23906	z_d_init = 0.729553 (rad)
-
-x_i_calc = 85345	x_d_calc = 0.000000
-y_i_calc = -73663	y_d_calc = 0.000000
-z_i_calc = 47231	z_d_calc = 0.000000 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.140187

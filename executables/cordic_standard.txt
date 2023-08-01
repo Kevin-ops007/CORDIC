@@ -1,0 +1,16 @@
+# started on Tue Aug  1 14:47:30 2023
+
+
+ Performance counter stats for './cordic_standard.exe' (10 runs):
+
+         39.165291      task-clock (msec)         #    0.853 CPUs utilized            ( +- 10.62% )
+                10      context-switches          #    0.245 K/sec                    ( +-  7.15% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.998 K/sec                    ( +-  0.60% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.04591 +- 0.00413 seconds time elapsed  ( +-  8.99% )
+
