@@ -12,15 +12,16 @@ int main(void)
     int x_i, y_i, z_i;                /* integer (fixed-point) variables*/
 
     // points
-    // (0.5, 0.5), (0.87, 0.34), (-0.2, 0.45), (-0.7, 0.1)
-    double x[4] = {0.5, 0.87, -0.2, -0.7};
-    double y[4] = {0.5, 0.34, 0.45, 0.1};
+    // double x[4] = {0.5, 0.87, -0.2, -0.7};
+    // double y[4] = {0.5, 0.34, 0.45, 0.1};
+    int x[4] = {1024, 1782, -409, -1433};
+    int y[4] = {1024, 696, 922, 205};
 
     // clock_t start = clock(), diff;
     for (int i = 0; i < 1000; ++i)
     {
-        x_i = (int)(x[i % 4] * (1 << 11) + 0.5);
-        y_i = (int)(y[i % 4] * (1 << 11) + 0.5);
+        x_i = x[i % 4];
+        y_i = y[i % 4];
         z_i = 0;
 
         cordic_V_fixed_point(&x_i, &y_i, &z_i);
