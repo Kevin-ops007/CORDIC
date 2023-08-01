@@ -9,7 +9,7 @@ for filename in *.exe; do
         file="${filename%.exe}"
         echo "Running perf for file: $filename"
         echo "Running perf for file : $filename" >> stats.txt
-        perf stat -o "$file".txt --r=70  ./"$filename" 
+        perf stat -o "$file".txt --r=100  ./"$filename" 
         cat "$file".txt >> stats.txt
         
         echo "perf for file $filename completed."
