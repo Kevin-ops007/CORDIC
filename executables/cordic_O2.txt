@@ -1,0 +1,16 @@
+# started on Tue Aug  1 14:56:43 2023
+
+
+ Performance counter stats for './cordic_O2.exe' (70 runs):
+
+         29.415271      task-clock (msec)         #    0.807 CPUs utilized            ( +-  6.19% )
+                 9      context-switches          #    0.291 K/sec                    ( +-  3.35% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.001 M/sec                    ( +-  0.21% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.03645 +- 0.00185 seconds time elapsed  ( +-  5.08% )
+

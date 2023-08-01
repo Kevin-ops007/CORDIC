@@ -1,176 +1,136 @@
 Running perf for file : cordic_32bit.exe
-Vectoring CORDIC:
+# started on Tue Aug  1 14:56:32 2023
 
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
 
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+ Performance counter stats for './cordic_32bit.exe' (70 runs):
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
+         51.660028      task-clock (msec)         #    0.849 CPUs utilized            ( +-  2.63% )
+                11      context-switches          #    0.205 K/sec                    ( +-  1.54% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                46      page-faults               #    0.883 K/sec                    ( +-  0.16% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
 
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
+           0.06087 +- 0.00173 seconds time elapsed  ( +-  2.84% )
 
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+Running perf for file : cordic_O1.exe
+# started on Tue Aug  1 14:56:38 2023
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
 
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
+ Performance counter stats for './cordic_O1.exe' (70 runs):
 
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+         28.435099      task-clock (msec)         #    0.788 CPUs utilized            ( +-  6.55% )
+                 9      context-switches          #    0.301 K/sec                    ( +-  3.67% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.001 M/sec                    ( +-  0.20% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
+           0.03607 +- 0.00210 seconds time elapsed  ( +-  5.83% )
 
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
+Running perf for file : cordic_O2.exe
+# started on Tue Aug  1 14:56:43 2023
 
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
+ Performance counter stats for './cordic_O2.exe' (70 runs):
 
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
+         29.415271      task-clock (msec)         #    0.807 CPUs utilized            ( +-  6.19% )
+                 9      context-switches          #    0.291 K/sec                    ( +-  3.35% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.001 M/sec                    ( +-  0.21% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
 
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
+           0.03645 +- 0.00185 seconds time elapsed  ( +-  5.08% )
 
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
-
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
-
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
-
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
-
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
-
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
-
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
-
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
-
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
-Vectoring CORDIC:
-
-unpacked x: 1740   y: 1556
-after x: 2334     y: 2
-xy: 2091E  (133406)
-x_i_init =  1740	x_d_init = 0.849609
-y_i_init =  1556	y_d_init = 0.759766
-z_i_init =  1494	z_d_init = 0.729492 (rad)
-
-x_i_calc =  2334	x_d_calc = 1.139648
-y_i_calc =     2	y_d_calc = 0.000977
-z_i_calc =  1491	z_d_calc = 0.728027 (rad)
-
-Modulus = SQRT(x_d_init^2 + y_d_init^2) = 1.139772	(expected)
-Modulus = SQRT(x_d^2 + y_d^2) = 1.139649	(result)
-float error in x (mag): 0.000123
-float error in z (arctan): 0.001465
 Running perf for file : cordic_pipeline.exe
+# started on Tue Aug  1 14:56:47 2023
+
+
+ Performance counter stats for './cordic_pipeline.exe' (70 runs):
+
+         25.240167      task-clock (msec)         #    0.787 CPUs utilized            ( +-  7.37% )
+                 8      context-switches          #    0.316 K/sec                    ( +-  3.78% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.002 M/sec                    ( +-  0.21% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.03209 +- 0.00189 seconds time elapsed  ( +-  5.90% )
+
 Running perf for file : cordic_register.exe
+# started on Tue Aug  1 14:56:51 2023
+
+
+ Performance counter stats for './cordic_register.exe' (70 runs):
+
+         19.676597      task-clock (msec)         #    0.741 CPUs utilized            ( +-  8.40% )
+                 7      context-switches          #    0.351 K/sec                    ( +-  3.77% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.002 M/sec                    ( +-  0.23% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.02656 +- 0.00167 seconds time elapsed  ( +-  6.29% )
+
 Running perf for file : cordic_standard.exe
+# started on Tue Aug  1 14:56:54 2023
+
+
+ Performance counter stats for './cordic_standard.exe' (70 runs):
+
+         19.017012      task-clock (msec)         #    0.734 CPUs utilized            ( +-  8.58% )
+                 7      context-switches          #    0.359 K/sec                    ( +-  3.86% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.002 M/sec                    ( +-  0.20% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.02591 +- 0.00165 seconds time elapsed  ( +-  6.38% )
+
 Running perf for file : cordic_ternary.exe
+# started on Tue Aug  1 14:56:58 2023
+
+
+ Performance counter stats for './cordic_ternary.exe' (70 runs):
+
+         15.652372      task-clock (msec)         #    0.700 CPUs utilized            ( +-  8.33% )
+                 6      context-switches          #    0.413 K/sec                    ( +-  3.52% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.003 M/sec                    ( +-  0.20% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.02237 +- 0.00132 seconds time elapsed  ( +-  5.89% )
+
 Running perf for file : cordic_unrolled.exe
+# started on Tue Aug  1 14:57:01 2023
+
+
+ Performance counter stats for './cordic_unrolled.exe' (70 runs):
+
+         15.293012      task-clock (msec)         #    0.690 CPUs utilized            ( +-  8.24% )
+                 6      context-switches          #    0.417 K/sec                    ( +-  3.41% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.003 M/sec                    ( +-  0.20% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.02216 +- 0.00128 seconds time elapsed  ( +-  5.80% )
+
