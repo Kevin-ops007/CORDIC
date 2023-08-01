@@ -5,7 +5,7 @@ int z_table[11] = {1608, 949, 501, 254, 127, 63, 31, 15, 7, 3, 1};
 
 void cordic_V_fixed_point(int *x, int *y, int *z); /* defined elsewhere*/
 
-void main(void)
+int main(void)
 {
     int x_i_init, y_i_init, z_i_init; /* initial values*/
     int x_i, y_i, z_i;                /* integer (fixed-point) variables*/
