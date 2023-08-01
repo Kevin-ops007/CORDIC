@@ -1,16 +1,16 @@
-# started on Tue Aug  1 14:57:01 2023
+# started on Tue Aug  1 15:17:59 2023
 
 
- Performance counter stats for './cordic_unrolled.exe' (70 runs):
+ Performance counter stats for './cordic_unrolled.exe' (100 runs):
 
-         15.293012      task-clock (msec)         #    0.690 CPUs utilized            ( +-  8.24% )
-                 6      context-switches          #    0.417 K/sec                    ( +-  3.41% )
+         11.396115      task-clock (msec)         #    0.618 CPUs utilized            ( +-  3.44% )
+                 6      context-switches          #    0.508 K/sec                    ( +-  2.06% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.003 M/sec                    ( +-  0.20% )
+                39      page-faults               #    0.003 M/sec                    ( +-  0.15% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.02216 +- 0.00128 seconds time elapsed  ( +-  5.80% )
+          0.018441 +- 0.000421 seconds time elapsed  ( +-  2.28% )
 

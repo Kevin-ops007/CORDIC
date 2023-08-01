@@ -1,136 +1,153 @@
 Running perf for file : cordic_32bit.exe
-# started on Tue Aug  1 14:56:32 2023
+# started on Tue Aug  1 15:17:21 2023
 
 
- Performance counter stats for './cordic_32bit.exe' (70 runs):
+ Performance counter stats for './cordic_32bit.exe' (100 runs):
 
-         51.660028      task-clock (msec)         #    0.849 CPUs utilized            ( +-  2.63% )
-                11      context-switches          #    0.205 K/sec                    ( +-  1.54% )
+         34.279846      task-clock (msec)         #    0.826 CPUs utilized            ( +-  5.09% )
+                 9      context-switches          #    0.256 K/sec                    ( +-  1.73% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                46      page-faults               #    0.883 K/sec                    ( +-  0.16% )
+                46      page-faults               #    0.001 M/sec                    ( +-  0.14% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.06087 +- 0.00173 seconds time elapsed  ( +-  2.84% )
+           0.04152 +- 0.00175 seconds time elapsed  ( +-  4.22% )
 
 Running perf for file : cordic_O1.exe
-# started on Tue Aug  1 14:56:38 2023
+# started on Tue Aug  1 15:17:28 2023
 
 
- Performance counter stats for './cordic_O1.exe' (70 runs):
+ Performance counter stats for './cordic_O1.exe' (100 runs):
 
-         28.435099      task-clock (msec)         #    0.788 CPUs utilized            ( +-  6.55% )
-                 9      context-switches          #    0.301 K/sec                    ( +-  3.67% )
+         20.211667      task-clock (msec)         #    0.741 CPUs utilized            ( +-  6.59% )
+                 7      context-switches          #    0.360 K/sec                    ( +-  2.89% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.001 M/sec                    ( +-  0.20% )
+                39      page-faults               #    0.002 M/sec                    ( +-  0.16% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.03607 +- 0.00210 seconds time elapsed  ( +-  5.83% )
+           0.02727 +- 0.00138 seconds time elapsed  ( +-  5.04% )
 
 Running perf for file : cordic_O2.exe
-# started on Tue Aug  1 14:56:43 2023
+# started on Tue Aug  1 15:17:33 2023
 
 
- Performance counter stats for './cordic_O2.exe' (70 runs):
+ Performance counter stats for './cordic_O2.exe' (100 runs):
 
-         29.415271      task-clock (msec)         #    0.807 CPUs utilized            ( +-  6.19% )
-                 9      context-switches          #    0.291 K/sec                    ( +-  3.35% )
+         19.936778      task-clock (msec)         #    0.727 CPUs utilized            ( +-  7.03% )
+                 7      context-switches          #    0.362 K/sec                    ( +-  3.10% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.001 M/sec                    ( +-  0.21% )
+                39      page-faults               #    0.002 M/sec                    ( +-  0.16% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.03645 +- 0.00185 seconds time elapsed  ( +-  5.08% )
+           0.02743 +- 0.00148 seconds time elapsed  ( +-  5.41% )
+
+Running perf for file : cordic_optimized_non_neon.exe
+# started on Tue Aug  1 15:17:38 2023
+
+
+ Performance counter stats for './cordic_optimized_non_neon.exe' (100 runs):
+
+         16.085472      task-clock (msec)         #    0.695 CPUs utilized            ( +-  6.94% )
+                 7      context-switches          #    0.413 K/sec                    ( +-  2.88% )
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.002 M/sec                    ( +-  0.16% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+
+           0.02315 +- 0.00113 seconds time elapsed  ( +-  4.90% )
 
 Running perf for file : cordic_pipeline.exe
-# started on Tue Aug  1 14:56:47 2023
+# started on Tue Aug  1 15:17:42 2023
 
 
- Performance counter stats for './cordic_pipeline.exe' (70 runs):
+ Performance counter stats for './cordic_pipeline.exe' (100 runs):
 
-         25.240167      task-clock (msec)         #    0.787 CPUs utilized            ( +-  7.37% )
-                 8      context-switches          #    0.316 K/sec                    ( +-  3.78% )
+         15.349494      task-clock (msec)         #    0.695 CPUs utilized            ( +-  6.74% )
+                 6      context-switches          #    0.416 K/sec                    ( +-  3.11% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.002 M/sec                    ( +-  0.21% )
+                39      page-faults               #    0.003 M/sec                    ( +-  0.17% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.03209 +- 0.00189 seconds time elapsed  ( +-  5.90% )
+           0.02209 +- 0.00105 seconds time elapsed  ( +-  4.75% )
 
 Running perf for file : cordic_register.exe
-# started on Tue Aug  1 14:56:51 2023
+# started on Tue Aug  1 15:17:47 2023
 
 
- Performance counter stats for './cordic_register.exe' (70 runs):
+ Performance counter stats for './cordic_register.exe' (100 runs):
 
-         19.676597      task-clock (msec)         #    0.741 CPUs utilized            ( +-  8.40% )
-                 7      context-switches          #    0.351 K/sec                    ( +-  3.77% )
+         12.406788      task-clock (msec)         #    0.646 CPUs utilized            ( +-  4.78% )
+                 6      context-switches          #    0.479 K/sec                    ( +-  2.19% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.002 M/sec                    ( +-  0.23% )
+                39      page-faults               #    0.003 M/sec                    ( +-  0.17% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.02656 +- 0.00167 seconds time elapsed  ( +-  6.29% )
+          0.019202 +- 0.000605 seconds time elapsed  ( +-  3.15% )
 
 Running perf for file : cordic_standard.exe
-# started on Tue Aug  1 14:56:54 2023
+# started on Tue Aug  1 15:17:51 2023
 
 
- Performance counter stats for './cordic_standard.exe' (70 runs):
+ Performance counter stats for './cordic_standard.exe' (100 runs):
 
-         19.017012      task-clock (msec)         #    0.734 CPUs utilized            ( +-  8.58% )
-                 7      context-switches          #    0.359 K/sec                    ( +-  3.86% )
+         11.409068      task-clock (msec)         #    0.624 CPUs utilized            ( +-  3.16% )
+                 6      context-switches          #    0.512 K/sec                    ( +-  1.97% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.002 M/sec                    ( +-  0.20% )
+                39      page-faults               #    0.003 M/sec                    ( +-  0.16% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.02591 +- 0.00165 seconds time elapsed  ( +-  6.38% )
+          0.018297 +- 0.000370 seconds time elapsed  ( +-  2.02% )
 
 Running perf for file : cordic_ternary.exe
-# started on Tue Aug  1 14:56:58 2023
+# started on Tue Aug  1 15:17:55 2023
 
 
- Performance counter stats for './cordic_ternary.exe' (70 runs):
+ Performance counter stats for './cordic_ternary.exe' (100 runs):
 
-         15.652372      task-clock (msec)         #    0.700 CPUs utilized            ( +-  8.33% )
-                 6      context-switches          #    0.413 K/sec                    ( +-  3.52% )
+         11.991554      task-clock (msec)         #    0.635 CPUs utilized            ( +-  5.80% )
+                 6      context-switches          #    0.481 K/sec                    ( +-  2.30% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.003 M/sec                    ( +-  0.20% )
+                39      page-faults               #    0.003 M/sec                    ( +-  0.15% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.02237 +- 0.00132 seconds time elapsed  ( +-  5.89% )
+          0.018881 +- 0.000706 seconds time elapsed  ( +-  3.74% )
 
 Running perf for file : cordic_unrolled.exe
-# started on Tue Aug  1 14:57:01 2023
+# started on Tue Aug  1 15:17:59 2023
 
 
- Performance counter stats for './cordic_unrolled.exe' (70 runs):
+ Performance counter stats for './cordic_unrolled.exe' (100 runs):
 
-         15.293012      task-clock (msec)         #    0.690 CPUs utilized            ( +-  8.24% )
-                 6      context-switches          #    0.417 K/sec                    ( +-  3.41% )
+         11.396115      task-clock (msec)         #    0.618 CPUs utilized            ( +-  3.44% )
+                 6      context-switches          #    0.508 K/sec                    ( +-  2.06% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.003 M/sec                    ( +-  0.20% )
+                39      page-faults               #    0.003 M/sec                    ( +-  0.15% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.02216 +- 0.00128 seconds time elapsed  ( +-  5.80% )
+          0.018441 +- 0.000421 seconds time elapsed  ( +-  2.28% )
 

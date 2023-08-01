@@ -1,10 +1,10 @@
-# started on Tue Aug  1 15:17:33 2023
+# started on Tue Aug  1 15:17:38 2023
 
 
- Performance counter stats for './cordic_O2.exe' (100 runs):
+ Performance counter stats for './cordic_optimized_non_neon.exe' (100 runs):
 
-         19.936778      task-clock (msec)         #    0.727 CPUs utilized            ( +-  7.03% )
-                 7      context-switches          #    0.362 K/sec                    ( +-  3.10% )
+         16.085472      task-clock (msec)         #    0.695 CPUs utilized            ( +-  6.94% )
+                 7      context-switches          #    0.413 K/sec                    ( +-  2.88% )
                  0      cpu-migrations            #    0.000 K/sec                  
                 39      page-faults               #    0.002 M/sec                    ( +-  0.16% )
    <not supported>      cycles                                                      
@@ -12,5 +12,5 @@
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.02743 +- 0.00148 seconds time elapsed  ( +-  5.41% )
+           0.02315 +- 0.00113 seconds time elapsed  ( +-  4.90% )
 

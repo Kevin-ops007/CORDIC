@@ -1,16 +1,16 @@
-# started on Tue Aug  1 14:56:51 2023
+# started on Tue Aug  1 15:17:47 2023
 
 
- Performance counter stats for './cordic_register.exe' (70 runs):
+ Performance counter stats for './cordic_register.exe' (100 runs):
 
-         19.676597      task-clock (msec)         #    0.741 CPUs utilized            ( +-  8.40% )
-                 7      context-switches          #    0.351 K/sec                    ( +-  3.77% )
+         12.406788      task-clock (msec)         #    0.646 CPUs utilized            ( +-  4.78% )
+                 6      context-switches          #    0.479 K/sec                    ( +-  2.19% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.002 M/sec                    ( +-  0.23% )
+                39      page-faults               #    0.003 M/sec                    ( +-  0.17% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.02656 +- 0.00167 seconds time elapsed  ( +-  6.29% )
+          0.019202 +- 0.000605 seconds time elapsed  ( +-  3.15% )
 
