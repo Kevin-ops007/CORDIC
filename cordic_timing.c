@@ -15,10 +15,10 @@ int main(void)
     double x[4] = {0.5, 0.87, -0.2, -0.7};
     double y[4] = {0.5, 0.34, 0.45, 0.1};
 
-    for (int i = 0; i < 4; ++i)
+    for (int i = 0; i < 1000; ++i)
     {
-        x_i = (int)(x[i] * (1 << 11) + 0.5);
-        y_i = (int)(y[i] * (1 << 11) + 0.5);
+        x_i = (int)(x[i % 4] * (1 << 11) + 0.5);
+        y_i = (int)(y[i % 4] * (1 << 11) + 0.5);
         z_i = 0;
 
         cordic_V_fixed_point(&x_i, &y_i, &z_i);
