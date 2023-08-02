@@ -34,9 +34,9 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         z_temp += sign * z_table[i];
     }
 
-    int16_t result[2];
+    int result[2];
     xy = vshr_n_s16(xy, 2);
-    vst1_s16(&result, xy);
+    vst1_s16(result, xy);
     result[0] *= 1244;
     result[0] = (result[0] + 1) >> 11; // scale factor back to 2^11
     *x = result[0];
