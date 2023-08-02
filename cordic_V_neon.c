@@ -33,7 +33,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         // multiply and accumulate
         // x = x + (sign[0] * y);
         // y = y + (sign[1] * x);
-        xy = vmla_n_s32(xy, sign_vec, yx);
+        xy = vmla_s32(xy, sign_vec, yx);
         z_temp += sign * z_table[i];
     }
 
