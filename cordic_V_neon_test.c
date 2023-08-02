@@ -20,7 +20,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     {
         int32x2_t yx = vrev64_s32(xy);
         /* 11 iterations are needed */
-        sign = v_get_lane_s32(xy, 1) > 0 ? 1 : -1;
+        sign = vget_lane_s32(xy, 1) > 0 ? 1 : -1;
 
         // // generate sign vector
         // int32x2_t sign_vec = {sign, -sign};
