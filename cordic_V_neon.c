@@ -12,7 +12,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
 
     int32_t sign = 0;
     int32_t z_temp = 0;
-    int32x2_t sign_vec = {1, -1}
+    int32x2_t sign_vec = {1, -1};
 
     // 2 element vector to hold x and y
     int32x2_t yx;
