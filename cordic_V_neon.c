@@ -12,7 +12,6 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
 
     int32_t sign = 0;
     int32_t z_temp = 0;
-    int32x2_t sign_vec = {1, -1};
 
     // 2 element vector to hold x and y
     int32x2_t yx;
@@ -21,7 +20,8 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     {
         yx = vrev64_s32(xy);
         /* 11 iterations are needed */
-        sign_vec = vget_lane_s32(xy, 1) > 0 ? (sign = 1, sign_vec) : (sign = -1, vrev64_s32(sign_vec));
+        sign = vget_lane_s32(xy, 1) > 0 ? 1 : -1;
+        int32x2_t sign_vec = {sign, -sign};
 
         // right shift by i
         int32x2_t shift = {-i, -i};
