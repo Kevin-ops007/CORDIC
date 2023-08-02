@@ -28,8 +28,8 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         // can hold xtemp and y temp in a vector
         // need to bit shift the old values
         // right shift values by i
-        const int k = i;
-        yx = vshr_n_s32(yx, k);
+        int32x2_t shift = {-i, -i};
+        yx = vshl_s32(yx, shift);
 
         // multiply and accumulate
         // x = x + (sign[0] * y);
