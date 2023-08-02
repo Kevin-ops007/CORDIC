@@ -34,7 +34,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         z_temp += sign * z_table[i];
     }
 
-    int result[2];
+    int16_t result[2];
     xy = vshr_n_s16(xy, 2);
     vst1_s16(result, xy);
     result[0] *= 1244;
