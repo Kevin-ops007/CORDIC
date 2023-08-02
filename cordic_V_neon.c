@@ -19,8 +19,8 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     {
         /* 11 iterations are needed */
         yx = vrev64_s32(xy); // reverse vector
-        sign = vget_lane_s32(xy, 1) > 0 ? 1 : -1;
-        int32x2_t sign_vec = {sign, -sign};
+        // sign = vget_lane_s32(xy, 1) > 0 ? 1 : -1;
+        // int32x2_t sign_vec = {sign, -sign};
 
         // right shift by i
         // int32x2_t shift = {-i, -i};
@@ -29,7 +29,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         // multiply and accumulate
         // x = x + (sign[0] * y);
         // y = y + (sign[1] * x);
-        xy = vmla_s32(xy, sign_vec, yx);
+        // xy = vmla_s32(xy, sign_vec, yx);
         z_temp += sign * z_table[i];
     }
 
