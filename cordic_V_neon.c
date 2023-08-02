@@ -26,14 +26,14 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         // can hold xtemp and y temp in a vector
         // need to bit shift the old values
         // right shift values by i
-        int32x2_t shift = {-i, -i};
-        yx = vshl_s32(yx, shift);
+        // int32x2_t shift = {-i, -i};
+        // yx = vshl_s32(yx, shift);
 
         // multiply and accumulate
         // x = x + (sign[0] * y);
         // y = y + (sign[1] * x);
         xy = vmla_s32(xy, sign_vec, yx);
-        // z_temp += sign * z_table[i];
+        z_temp += sign * z_table[i];
     }
 
     xy = vshr_n_s32(xy, 2);
