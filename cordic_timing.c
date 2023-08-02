@@ -18,7 +18,8 @@ int main(void)
     int y[4] = {1024, 696, 922, 205};
 
     // clock_t start = clock(), diff;
-    for (int i = 0; i < 1000; ++i)
+    int i;
+    for (i = 0; i < 1000; ++i)
     {
         x_i = x[i % 4];
         y_i = y[i % 4];
