@@ -37,7 +37,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         z_temp += sign * z_table[i];
     }
 
-    vshr_n_s32(xy, 2);
+    xy = vshr_n_s32(xy, 2);
     x_temp_1 = vget_lane_s32(xy, 0);
     y_temp_1 = vget_lane_s32(xy, 1);
     x_temp_1 *= 1244;
