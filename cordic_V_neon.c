@@ -33,12 +33,12 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         z_temp += sign * z_table[i];
     }
 
-    int32_t result[2];
-    xy = vshr_n_s32(xy, 2);
-    vst1_s32(result, xy);
-    result[0] *= 1244;
-    result[0] = (result[0] + 1) >> 11; // scale factor back to 2^11
-    *x = result[0];
-    *y = result[1];
+    // int32_t result[2];
+    // xy = vshr_n_s32(xy, 2);
+    // vst1_s32(result, xy);
+    // result[0] *= 1244;
+    // result[0] = (result[0] + 1) >> 11; // scale factor back to 2^11
+    // *x = result[0];
+    // *y = result[1];
     *z = z_temp;
 }
