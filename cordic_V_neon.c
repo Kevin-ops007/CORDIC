@@ -20,7 +20,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     {
         yx = vrev64_s32(xy);
         /* 11 iterations are needed */
-        sign = xy[1] > 0 ? 1 : -1;
+        sign = vget_lane_s32(xy, 1) > 0 ? 1 : -1;
 
         // generate sign vector
         int32x2_t sign_vec = {sign, -sign};
@@ -37,8 +37,8 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         z_temp += sign * z_table[i];
     }
 
-    x_temp_1 = xy[0];
-    y_temp_1 = xy[1];
+    x_temp_1 = vget_lane_s32(xy, 0);
+    y_temp_1 = vget_lane_s32(xy, 1);
     x_temp_1 *= 1244;
     x_temp_1 = (x_temp_1 + 1) >> 13; // scale factor back to 2^11
     y_temp_1 = (y_temp_1 + 1) >> 2;  // scale factor back to 2^11
