@@ -14,7 +14,6 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
 
     // 2 element vector to hold x and y
     int32x2_t xy = {x_temp_1, y_temp_1};
-    int32x2_t sign = {1, -1};
     // int32x2_t yx;
 
     for (i = 0; i < 11; i++)
