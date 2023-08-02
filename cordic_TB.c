@@ -5,6 +5,7 @@ int main(void)
 {
     double x_d, y_d, z_d; /* 64-bit floating-point variables */
     int x_i, y_i, z_i;    /* integer (fixed-point) variables */
+    int i;
     x_d = 0.85;
     y_d = 0.76;
     z_d = atan(y_d / x_d); /* call std-C math routines */
@@ -21,12 +22,12 @@ int main(void)
     printf("z_d = %f\t\t\tz_i = %i\n", z_d, z_i);
     printf("\nThe angle table:\n");
     printf("12 bit samples\n");
-    for (int i = 0; i < 11; ++i)
+    for (i = 0; i < 11; ++i)
     {
         printf("z[%2i] = %i\n", i, (int)(atan(pow(2.0, (double)(-i))) * (1 << 11)));
     }
     double scale = 1.0;
-    for (int i = 0; i < 12; ++i)
+    for (i = 0; i < 12; ++i)
     {
         scale *= sqrt(1 + pow(2.0, -2.0 * i));
     }
