@@ -6,37 +6,37 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
 {
     int i;
 
-    // int32_t are 32 bit integers
-    int32x2_t xy = {*x, *y};
-    xy = vshl_n_s32(xy, 2);
+    // int16_t are 16 bit integers
+    int16x2_t xy = {*x, *y};
+    xy = vshl_n_s16(xy, 2);
 
-    int32_t sign = 0;
-    int32_t z_temp = 0;
+    int16_t sign = 0;
+    int16_t z_temp = 0;
 
     // 2 element vector to hold x and y
-    int32x2_t yx;
+    int16x2_t yx;
 
     for (i = 0; i < 11; i++)
     {
-        yx = vrev64_s32(xy);
+        yx = vrev64_s16(xy);
         /* 11 iterations are needed */
-        sign = vget_lane_s32(xy, 1) > 0 ? 1 : -1;
-        int32x2_t sign_vec = {sign, -sign};
+        sign = vget_lane_s16(xy, 1) > 0 ? 1 : -1;
+        int16x2_t sign_vec = {sign, -sign};
 
         // right shift by i
-        int32x2_t shift = {-i, -i};
-        yx = vshl_s32(yx, shift);
+        int16x2_t shift = {-i, -i};
+        yx = vshl_s16(yx, shift);
 
         // multiply and accumulate
         // x = x + (sign[0] * y);
         // y = y + (sign[1] * x);
-        xy = vmla_s32(xy, sign_vec, yx);
+        xy = vmla_s16(xy, sign_vec, yx);
         z_temp += sign * z_table[i];
     }
 
-    int result[2];
-    xy = vshr_n_s32(xy, 2);
-    vst1_s32(&result, xy);
+    int16_t result[2];
+    xy = vshr_n_s16(xy, 2);
+    vst1_s16(&result, xy);
     result[0] *= 1244;
     result[0] = (result[0] + 1) >> 11; // scale factor back to 2^11
     *x = result[0];
