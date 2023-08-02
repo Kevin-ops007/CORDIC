@@ -20,7 +20,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     {
         yx = vrev64_s32(xy);
         /* 11 iterations are needed */
-        sign = xy[1] > 0 ? 1 : -1;
+        sign = xy.val[1] > 0 ? 1 : -1;
 
         // generate sign vector
         int32x2_t sign_vec = {sign, -sign};
@@ -28,7 +28,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         // can hold xtemp and y temp in a vector
         // need to bit shift the old values
         // right shift values by i
-        vshr_n_s32(yx, i);
+        yx = vshr_n_s32(yx, i);
 
         // multiply and accumulate
         // x = x + (sign[0] * y);
