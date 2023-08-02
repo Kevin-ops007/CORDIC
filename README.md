@@ -7,7 +7,10 @@ ssh to
 ```
 seng440.uvic.ca
 ```
-compile with 
+```
+cd /tmp
+```
+clone repo then compile with 
 ```
 arm-linux-gcc -mfloat-abi=softfp -mfpu=neon -static -O3
 ```
