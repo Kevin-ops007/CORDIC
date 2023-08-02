@@ -15,15 +15,14 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     // 2 element vector to hold x and y
     int32x2_t xy = {x_temp_1, y_temp_1};
     int32x2_t yx;
+    int32x2_t sign_vec;
 
     for (i = 0; i < 11; i++)
     {
         yx = vrev64_s32(xy);
         /* 11 iterations are needed */
         sign = vget_lane_s32(xy, 1) > 0 ? 1 : -1;
-
-        // generate sign vector
-        int32x2_t sign_vec = {sign, -sign};
+        sign_vec = {sign, -sign};
 
         // can hold xtemp and y temp in a vector
         // need to bit shift the old values
@@ -38,12 +37,11 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         z_temp += sign * z_table[i];
     }
 
+    vshr_n_s32(xy, 2);
     x_temp_1 = vget_lane_s32(xy, 0);
     y_temp_1 = vget_lane_s32(xy, 1);
     x_temp_1 *= 1244;
-    x_temp_1 = (x_temp_1 + 1) >> 13; // scale factor back to 2^11
-    y_temp_1 = (y_temp_1 + 1) >> 2;  // scale factor back to 2^11
-
+    x_temp_1 = (x_temp_1 + 1) >> 11; // scale factor back to 2^11
     *x = x_temp_1;
     *y = y_temp_1;
     *z = z_temp;
