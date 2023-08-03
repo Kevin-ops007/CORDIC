@@ -1,7 +1,7 @@
 #include <stdio.h>
 int z_table[11];
- 
-void cordic_V_fixed_point(int * restrict x, int * restrict y, int * restrict z)
+
+void cordic_V_fixed_point(int *restrict x, int *restrict y, int *restrict z)
 {
     int x_temp_1, y_temp_1, z_temp;
     int x_temp_2, y_temp_2;
@@ -13,7 +13,7 @@ void cordic_V_fixed_point(int * restrict x, int * restrict y, int * restrict z)
     y_temp_1 = (*y) << 2; // scale factor is now 2^13
     z_temp = 0;
 
-    for (int i = 0; i < 11; i++)
+    for (i = 0; i < 11; i++)
     { /* 11 iterations are needed */
         if (y_temp_1 > 0)
         {
