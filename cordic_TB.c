@@ -27,7 +27,7 @@ int main(void)
         printf("z[%2i] = %i\n", i, (int)(atan(pow(2.0, (double)(-i))) * (1 << 11)));
     }
     double scale = 1.0;
-    for (i = 0; i < 12; ++i)
+    for (i = 0; i < 11; ++i)
     {
         scale *= sqrt(1 + pow(2.0, -2.0 * i));
     }
