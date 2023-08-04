@@ -10,8 +10,6 @@ void cordic_V_fixed_point(int *xy, int *z)
     x_temp_1 = (*xy) & 0xfff;
     y_temp_1 = (*xy >> 16) & 0xfff;
 
-    printf("unpacked x: %d   y: %d\n", x_temp_1, y_temp_1);
-
     x_temp_1 = x_temp_1 << 2;
     y_temp_1 = y_temp_1 << 2;
 
@@ -38,10 +36,7 @@ void cordic_V_fixed_point(int *xy, int *z)
     x_temp_1 = (x_temp_1 + 1) >> 13; // scale factor back to 2^11
     y_temp_1 = (y_temp_1 + 1) >> 2;  // scale factor back to 2^11
 
-    printf("after x: %d     y: %d\n", x_temp_1, y_temp_1);
-
-    // Repack x and y into xy 
+    // Repack x and y into xy
     *xy = y_temp_1 << 16 | x_temp_1;
-    printf("xy: %X  (%d)\n", *xy, *xy);
     *z = z_temp;
 }
