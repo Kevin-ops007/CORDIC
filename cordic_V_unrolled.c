@@ -7,7 +7,7 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
     int x_temp_2, y_temp_2;
     int i = 0;
     x_temp_1 = (*x) << 2; // scale factor is now 2^13
-    y_temp_1 = (*y) << 2; // scale factor is now 2^13s
+    y_temp_1 = (*y) << 2; // scale factor is now 2^13
     z_temp = 0;
     for (; i < 10; i += 2)
     { /* 11 iterations are needed */

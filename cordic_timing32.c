@@ -4,12 +4,12 @@
 #include <time.h>
 int z_table[11] = {1608, 949, 501, 254, 127, 63, 31, 15, 7, 3, 1};
 
-void cordic_V_fixed_point(int *x, int *y, int *z); /* defined elsewhere*/
+void cordic_V_fixed_point(int *xy, int *z); /* defined elsewhere*/
 
 int main(void)
 {
     int x_i_init, y_i_init, z_i_init; /* initial values*/
-    int x_i, y_i, z_i;                /* integer (fixed-point) variables*/
+    int xy_i, z_i;                    /* integer (fixed-point) variables*/
 
     // points
     // double x[4] = {0.5, 0.87, -0.2, -0.7};
@@ -20,11 +20,10 @@ int main(void)
     int i;
     for (i = 0; i < 1000; ++i)
     {
-        x_i = x[i % 4];
-        y_i = y[i % 4];
+        xy_i = y[i % 4] << 16 | x[i % 4];
         z_i = 0;
 
-        cordic_V_fixed_point(&x_i, &y_i, &z_i);
+        cordic_V_fixed_point(&xy_i, &z_i);
     }
 
     return 0;
