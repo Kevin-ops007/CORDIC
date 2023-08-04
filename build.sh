@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Compile main file name
-main_file="cordic_main_no_io.c"
+main_file="cordic_timing.c"
 
 # Get a list of all C files with the pattern cordic_V_*.c in the current directory
 c_files=(cordic_V_*.c)
 
-gcc -O1 cordic_main_no_io.c cordic_V_standard.c -o cordic_O1.exe -lm
-gcc -O2 cordic_main_no_io.c cordic_V_standard.c -o cordic_O2.exe -lm
+gcc -O1 cordic_timing.c cordic_V_standard.c -o cordic_O1.exe -lm
+gcc -O2 cordic_timing.c cordic_V_standard.c -o cordic_O2.exe -lm
 
 for c_file in "${c_files[@]}"; do
     # Extract the part after "cordic_V_" from the C file name
