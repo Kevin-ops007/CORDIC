@@ -18,7 +18,6 @@ int main(void)
     int y[4] = {1024, 696, 922, 205};
 
     int i;
-    clock_t begin = clock();
     for (i = 0; i < 10000000; ++i)
     {
         xy_i = y[i % 4] << 16 | x[i % 4];
@@ -26,8 +25,5 @@ int main(void)
 
         cordic_V_fixed_point(&xy_i, &z_i);
     }
-    clock_t end = clock();
-    double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("%f time spent\n", time_spent);
     return 0;
 }
