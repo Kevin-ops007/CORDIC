@@ -19,7 +19,7 @@ int main(void)
 
     int i;
     clock_t begin = clock();
-    for (i = 0; i < 1000; ++i)
+    for (i = 0; i < 10000000; ++i)
     {
         x_i = x[i % 4];
         y_i = y[i % 4];
