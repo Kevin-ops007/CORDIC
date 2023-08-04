@@ -23,8 +23,8 @@ for c_file in "${c_files[@]}"; do
         arm-linux-gcc -O3 cordic_timing32.c cordic_V_32bit.c -o cordic_32bit.exe
         arm-linux-gcc -O3 -S "$c_file" -o "$arm_code"
     elif [[ $c_file == "cordic_V_neon.c" ]]; then
-        arm-linux-gcc -O3 -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" 
-        arm-linux-gcc -O3 -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "$arm_code"
+        arm-linux-gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file" 
+        arm-linux-gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "$arm_code"
     else
         echo "COMPILING $c_file"
         # Compile the files with arm-linux-gcc
