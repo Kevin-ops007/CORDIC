@@ -23,15 +23,18 @@ for c_file in "${c_files[@]}"; do
         arm-linux-gcc -O3 -static cordic_timing32.c cordic_V_32bit.c -o cordic_32bit.exe
         arm-linux-gcc -O3 -S "$c_file" -o "$arm_code"
     elif [[ $c_file == "cordic_V_neon.c" ]]; then
-        arm-linux-gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file"  -lm
+        arm-linux-gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file"
         arm-linux-gcc -mfloat-abi=softfp -mfpu=neon -static -S "$c_file" -o "$arm_code"
+    elif [[ $c_file == "cordic_V_restrict.c" ]]; then
+        arm-linux-gcc -static -o "$output_executable" "$main_file" "$c_file" -std=c99
+        arm-linux-gcc -static -S "$c_file" -o "$arm_code" -std=c99
     elif [[ $c_file == "cordic_V_inline_arm.c" ]]; then
         echo "Skipping $c_file"
     else
         echo "COMPILING $c_file"
         # Compile the files with arm-linux-gcc
-        arm-linux-gcc -O3 -static "$main_file" "$c_file" -o "$output_executable" -std=c99
-        arm-linux-gcc -O3 -S "$c_file" -o "$arm_code" -std=c99
+        arm-linux-gcc -O3 -static "$main_file" "$c_file" -o "$output_executable"
+        arm-linux-gcc -O3 -S "$c_file" -o "$arm_code"
     fi
 done
 
