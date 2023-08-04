@@ -8,10 +8,12 @@ for filename in *.exe; do
     if [ -f "$filename" ]; then
         file="${filename%.exe}"
         echo "Running perf for file: $filename"
+        
         echo "Running perf for file : $filename" >> stats.txt
         perf stat -o "$file".txt --repeat=2000  qemu-arm ./"$filename" 
         grep "( +-" "$file".txt >> stats.txt
-        
+        echo "" >> stats.txt 
+        echo "" >> stats.txt   
         echo "perf for file $filename completed."
     fi
 done
