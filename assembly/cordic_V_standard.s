@@ -1,6 +1,5 @@
 	.arch armv4t
-	.eabi_attribute 27, 3
-	.fpu neon
+	.fpu softvfp
 	.eabi_attribute 20, 1
 	.eabi_attribute 21, 1
 	.eabi_attribute 23, 3
@@ -147,6 +146,6 @@ cordic_V_fixed_point:
 .L25:
 	.word	z_table
 	.size	cordic_V_fixed_point, .-cordic_V_fixed_point
-	.comm	z_table,44,8
+	.comm	z_table,44,4
 	.ident	"GCC: (Sourcery G++ Lite 2008q3-72) 4.3.2"
 	.section	.note.GNU-stack,"",%progbits
