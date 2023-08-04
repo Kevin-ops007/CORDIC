@@ -1,16 +1,16 @@
-# started on Tue Aug  1 15:17:21 2023
+# started on Thu Aug  3 21:50:40 2023
 
 
  Performance counter stats for './cordic_32bit.exe' (100 runs):
 
-         34.279846      task-clock (msec)         #    0.826 CPUs utilized            ( +-  5.09% )
-                 9      context-switches          #    0.256 K/sec                    ( +-  1.73% )
+         21.010213      task-clock (msec)         #    0.774 CPUs utilized            ( +-  3.33% )
+                 1      context-switches          #    0.061 K/sec                    ( +-  4.45% )
                  0      cpu-migrations            #    0.000 K/sec                  
-                46      page-faults               #    0.001 M/sec                    ( +-  0.14% )
+                46      page-faults               #    0.002 M/sec                    ( +-  0.13% )
    <not supported>      cycles                                                      
    <not supported>      instructions                                                
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-           0.04152 +- 0.00175 seconds time elapsed  ( +-  4.22% )
+          0.027148 +- 0.000713 seconds time elapsed  ( +-  2.63% )
 

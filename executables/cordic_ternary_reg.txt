@@ -1,10 +1,10 @@
-# started on Thu Aug  3 21:51:14 2023
+# started on Thu Aug  3 21:51:18 2023
 
 
- Performance counter stats for './cordic_ternary.exe' (100 runs):
+ Performance counter stats for './cordic_ternary_reg.exe' (100 runs):
 
-          9.409111      task-clock (msec)         #    0.608 CPUs utilized            ( +-  1.34% )
-                 1      context-switches          #    0.081 K/sec                    ( +-  5.65% )
+         10.767840      task-clock (msec)         #    0.618 CPUs utilized            ( +-  2.14% )
+                 4      context-switches          #    0.365 K/sec                    ( +-  7.11% )
                  0      cpu-migrations            #    0.000 K/sec                  
                 39      page-faults               #    0.004 M/sec                    ( +-  0.17% )
    <not supported>      cycles                                                      
@@ -12,5 +12,5 @@
    <not supported>      branches                                                    
    <not supported>      branch-misses                                               
 
-          0.015471 +- 0.000152 seconds time elapsed  ( +-  0.98% )
+          0.017433 +- 0.000296 seconds time elapsed  ( +-  1.70% )
 
