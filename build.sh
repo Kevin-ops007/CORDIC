@@ -46,6 +46,3 @@ mv *.s ./assembly
 mv *.exe ./executables
 
 cd executables
-
-echo "RUNNING PERF NOW"
-./perf.sh
