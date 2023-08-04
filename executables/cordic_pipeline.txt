@@ -1,0 +1,16 @@
+# started on Fri Aug  4 12:06:52 2023
+
+
+ Performance counter stats for 'qemu-arm ./cordic_pipeline.exe' (10 runs):
+
+          1,027.43 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.24% )
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+             1,008      page-faults:u             #    0.981 K/sec                    ( +-  0.02% )
+     4,081,651,926      cycles:u                  #    3.973 GHz                      ( +-  0.25% )
+    12,448,671,943      instructions:u            #    3.05  insn per cycle           ( +-  0.00% )
+     1,583,527,565      branches:u                # 1541.251 M/sec                    ( +-  0.00% )
+         2,586,734      branch-misses:u           #    0.16% of all branches          ( +-  0.10% )
+
+           1.02765 +- 0.00246 seconds time elapsed  ( +-  0.24% )
+

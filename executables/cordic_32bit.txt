@@ -1,0 +1,16 @@
+# started on Fri Aug  4 12:05:17 2023
+
+
+ Performance counter stats for 'qemu-arm ./cordic_32bit.exe' (10 runs):
+
+          1,151.41 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.06% )
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+             1,010      page-faults:u             #    0.877 K/sec                    ( +-  0.01% )
+     4,571,964,979      cycles:u                  #    3.971 GHz                      ( +-  0.01% )
+    14,158,989,507      instructions:u            #    3.10  insn per cycle           ( +-  0.00% )
+     1,743,585,362      branches:u                # 1514.302 M/sec                    ( +-  0.00% )
+            80,312      branch-misses:u           #    0.00% of all branches          ( +-  0.29% )
+
+          1.151647 +- 0.000643 seconds time elapsed  ( +-  0.06% )
+

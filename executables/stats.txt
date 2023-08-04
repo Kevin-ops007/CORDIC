@@ -1,0 +1,100 @@
+Running perf for file : cordic_32bit.exe
+          1,151.41 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.06% )
+             1,010      page-faults:u             #    0.877 K/sec                    ( +-  0.01% )
+     4,571,964,979      cycles:u                  #    3.971 GHz                      ( +-  0.01% )
+    14,158,989,507      instructions:u            #    3.10  insn per cycle           ( +-  0.00% )
+     1,743,585,362      branches:u                # 1514.302 M/sec                    ( +-  0.00% )
+            80,312      branch-misses:u           #    0.00% of all branches          ( +-  0.29% )
+          1.151647 +- 0.000643 seconds time elapsed  ( +-  0.06% )
+
+
+Running perf for file : cordic_neon.exe
+          5,388.40 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.02% )
+             1,015      page-faults:u             #    0.188 K/sec                    ( +-  0.02% )
+    21,453,005,463      cycles:u                  #    3.981 GHz                      ( +-  0.02% )
+    36,471,052,665      instructions:u            #    1.70  insn per cycle           ( +-  0.00% )
+     3,428,516,459      branches:u                #  636.277 M/sec                    ( +-  0.00% )
+         7,602,823      branch-misses:u           #    0.22% of all branches          ( +-  0.05% )
+          5.388703 +- 0.000883 seconds time elapsed  ( +-  0.02% )
+
+
+Running perf for file : cordic_O1.exe
+          1,506.31 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.73% )
+             1,007      page-faults:u             #    0.668 K/sec                    ( +-  0.02% )
+     5,986,006,282      cycles:u                  #    3.974 GHz                      ( +-  0.73% )
+    19,458,170,749      instructions:u            #    3.25  insn per cycle           ( +-  0.00% )
+     2,223,437,473      branches:u                # 1476.086 M/sec                    ( +-  0.00% )
+         2,597,621      branch-misses:u           #    0.12% of all branches          ( +-  0.22% )
+            1.5066 +- 0.0110 seconds time elapsed  ( +-  0.73% )
+
+
+Running perf for file : cordic_O2.exe
+          1,431.63 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.50% )
+             1,006      page-faults:u             #    0.703 K/sec                    ( +-  0.01% )
+     5,679,391,864      cycles:u                  #    3.967 GHz                      ( +-  0.47% )
+    18,968,140,112      instructions:u            #    3.34  insn per cycle           ( +-  0.00% )
+     2,003,431,617      branches:u                # 1399.408 M/sec                    ( +-  0.00% )
+         2,585,578      branch-misses:u           #    0.13% of all branches          ( +-  0.07% )
+           1.43185 +- 0.00719 seconds time elapsed  ( +-  0.50% )
+
+
+Running perf for file : cordic_pipeline.exe
+          1,027.43 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.24% )
+             1,008      page-faults:u             #    0.981 K/sec                    ( +-  0.02% )
+     4,081,651,926      cycles:u                  #    3.973 GHz                      ( +-  0.25% )
+    12,448,671,943      instructions:u            #    3.05  insn per cycle           ( +-  0.00% )
+     1,583,527,565      branches:u                # 1541.251 M/sec                    ( +-  0.00% )
+         2,586,734      branch-misses:u           #    0.16% of all branches          ( +-  0.10% )
+           1.02765 +- 0.00246 seconds time elapsed  ( +-  0.24% )
+
+
+Running perf for file : cordic_register.exe
+          1,174.55 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.10% )
+             1,009      page-faults:u             #    0.859 K/sec                    ( +-  0.02% )
+     4,663,725,740      cycles:u                  #    3.971 GHz                      ( +-  0.05% )
+    14,188,848,969      instructions:u            #    3.04  insn per cycle           ( +-  0.00% )
+     1,743,559,524      branches:u                # 1484.451 M/sec                    ( +-  0.00% )
+         2,598,224      branch-misses:u           #    0.15% of all branches          ( +-  0.15% )
+           1.17478 +- 0.00119 seconds time elapsed  ( +-  0.10% )
+
+
+Running perf for file : cordic_restrict.exe
+          1,571.27 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.25% )
+             1,008      page-faults:u             #    0.641 K/sec                    ( +-  0.02% )
+     6,245,584,819      cycles:u                  #    3.975 GHz                      ( +-  0.26% )
+    18,750,708,152      instructions:u            #    3.00  insn per cycle           ( +-  0.00% )
+     1,668,447,636      branches:u                # 1061.846 M/sec                    ( +-  0.00% )
+         3,095,028      branch-misses:u           #    0.19% of all branches          ( +- 16.22% )
+           1.57150 +- 0.00398 seconds time elapsed  ( +-  0.25% )
+
+
+Running perf for file : cordic_standard.exe
+          1,174.08 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.08% )
+             1,009      page-faults:u             #    0.859 K/sec                    ( +-  0.02% )
+     4,665,838,160      cycles:u                  #    3.974 GHz                      ( +-  0.07% )
+    14,188,848,656      instructions:u            #    3.04  insn per cycle           ( +-  0.00% )
+     1,743,559,455      branches:u                # 1485.048 M/sec                    ( +-  0.00% )
+         2,592,046      branch-misses:u           #    0.15% of all branches          ( +-  0.14% )
+          1.174320 +- 0.000884 seconds time elapsed  ( +-  0.08% )
+
+
+Running perf for file : cordic_ternary.exe
+            801.79 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.03% )
+             1,008      page-faults:u             #    0.001 M/sec                    ( +-  0.02% )
+     3,182,088,959      cycles:u                  #    3.969 GHz                      ( +-  0.01% )
+    10,008,399,765      instructions:u            #    3.15  insn per cycle           ( +-  0.00% )
+     1,053,479,440      branches:u                # 1313.910 M/sec                    ( +-  0.00% )
+            77,808      branch-misses:u           #    0.01% of all branches          ( +-  0.26% )
+          0.802019 +- 0.000257 seconds time elapsed  ( +-  0.03% )
+
+
+Running perf for file : cordic_unrolled.exe
+          1,174.94 msec task-clock:u              #    1.000 CPUs utilized            ( +-  0.15% )
+             1,008      page-faults:u             #    0.858 K/sec                    ( +-  0.02% )
+     4,664,715,977      cycles:u                  #    3.970 GHz                      ( +-  0.13% )
+    14,188,848,866      instructions:u            #    3.04  insn per cycle           ( +-  0.00% )
+     1,743,559,503      branches:u                # 1483.961 M/sec                    ( +-  0.00% )
+         2,850,702      branch-misses:u           #    0.16% of all branches          ( +-  8.60% )
+           1.17517 +- 0.00172 seconds time elapsed  ( +-  0.15% )
+
+
