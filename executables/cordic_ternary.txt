@@ -1,16 +1,16 @@
-# started on Thu Aug  3 21:51:14 2023
+# started on Fri Aug  4 11:01:49 2023
 
 
- Performance counter stats for './cordic_ternary.exe' (100 runs):
+ Performance counter stats for 'qemu-arm ./cordic_ternary.exe' (2000 runs):
 
-          9.409111      task-clock (msec)         #    0.608 CPUs utilized            ( +-  1.34% )
-                 1      context-switches          #    0.081 K/sec                    ( +-  5.65% )
-                 0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.004 M/sec                    ( +-  0.17% )
-   <not supported>      cycles                                                      
-   <not supported>      instructions                                                
-   <not supported>      branches                                                    
-   <not supported>      branch-misses                                               
+              4.10 msec task-clock:u              #    0.963 CPUs utilized            ( +-  0.02% )
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+             1,008      page-faults:u             #    0.246 M/sec                    ( +-  0.00% )
+        10,326,907      cycles:u                  #    2.519 GHz                      ( +-  0.01% )
+        19,368,159      instructions:u            #    1.88  insn per cycle           ( +-  0.00% )
+         3,578,399      branches:u                #  872.900 M/sec                    ( +-  0.00% )
+            72,367      branch-misses:u           #    2.02% of all branches          ( +-  0.01% )
 
-          0.015471 +- 0.000152 seconds time elapsed  ( +-  0.98% )
+        0.00425511 +- 0.00000103 seconds time elapsed  ( +-  0.02% )
 

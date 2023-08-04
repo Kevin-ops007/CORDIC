@@ -1,16 +1,16 @@
-# started on Thu Aug  3 21:50:57 2023
+# started on Fri Aug  4 11:01:03 2023
 
 
- Performance counter stats for './cordic_O2.exe' (100 runs):
+ Performance counter stats for 'qemu-arm ./cordic_O2.exe' (2000 runs):
 
-         10.065586      task-clock (msec)         #    0.630 CPUs utilized            ( +-  4.20% )
-                 1      context-switches          #    0.076 K/sec                    ( +-  6.87% )
-                 0      cpu-migrations            #    0.000 K/sec                  
-                39      page-faults               #    0.004 M/sec                    ( +-  0.15% )
-   <not supported>      cycles                                                      
-   <not supported>      instructions                                                
-   <not supported>      branches                                                    
-   <not supported>      branch-misses                                               
+              4.14 msec task-clock:u              #    0.963 CPUs utilized            ( +-  0.04% )
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+             1,007      page-faults:u             #    0.243 M/sec                    ( +-  0.00% )
+        10,486,767      cycles:u                  #    2.532 GHz                      ( +-  0.04% )
+        20,029,587      instructions:u            #    1.91  insn per cycle           ( +-  0.00% )
+         3,629,636      branches:u                #  876.228 M/sec                    ( +-  0.00% )
+            72,212      branch-misses:u           #    1.99% of all branches          ( +-  0.02% )
 
-          0.015986 +- 0.000432 seconds time elapsed  ( +-  2.70% )
+        0.00430050 +- 0.00000177 seconds time elapsed  ( +-  0.04% )
 

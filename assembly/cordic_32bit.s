@@ -1,5 +1,5 @@
-	.arch armv7-a
-	.eabi_attribute 28, 1
+	.arch armv4t
+	.fpu softvfp
 	.eabi_attribute 20, 1
 	.eabi_attribute 21, 1
 	.eabi_attribute 23, 3
@@ -7,168 +7,148 @@
 	.eabi_attribute 25, 1
 	.eabi_attribute 26, 2
 	.eabi_attribute 30, 2
-	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"cordic_V_32bit.c"
 	.text
 	.align	2
 	.global	cordic_V_fixed_point
-	.arch armv7-a
-	.syntax unified
-	.arm
-	.fpu vfpv3-d16
 	.type	cordic_V_fixed_point, %function
 cordic_V_fixed_point:
+	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, r7, r8, lr}
+	@ link register save eliminated.
+	ldr	r2, [r0, #0]
+	mov	r3, r2, lsr #14
+	bic	ip, r3, #3
+	mov	ip, ip, asl #18
+	mov	ip, ip, lsr #18
+	cmp	ip, #0
+	stmfd	sp!, {r4, r5, r6}
+	mov	r2, r2, asl #20
 	mov	r5, r0
-	movw	r0, #:lower16:.LC0
-	ldr	r7, [r5]
-	mov	r4, r1
-	ubfx	r6, r7, #0, #12
-	ubfx	r7, r7, #16, #12
-	mov	r2, r7
-	mov	r1, r6
-	movt	r0, #:upper16:.LC0
-	bl	printf
-	movw	r0, #:lower16:z_table
-	lsl	r1, r6, #2
-	lsls	r7, r7, #2
-	moveq	r2, r1
-	movt	r0, #:upper16:z_table
-	ldr	ip, [r0]
-	addne	r2, r1, r7
-	subne	r1, r7, r1
-	asr	r3, r2, #1
-	ldr	r6, [r0, #4]
-	rsbeq	ip, ip, #0
-	asr	lr, r1, #1
+	ldrle	r0, .L25
+	mov	r2, r2, lsr #20
+	ldrle	r3, [r0, #0]
+	mov	r2, r2, asl #2
+	ldrgt	r0, .L25
+	mov	r6, r1
+	addle	r1, r2, ip
+	rsbgt	r1, r2, ip
+	rsble	r4, r3, #0
+	rsble	ip, ip, r2
+	addgt	ip, r2, ip
+	ldrgt	r4, [r0, #0]
 	cmp	r1, #0
-	subgt	r3, r1, r3
-	addle	r3, r3, r1
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	asr	r1, r2, #2
-	asr	lr, r3, #2
-	addgt	r6, ip, r6
-	suble	r6, ip, r6
-	cmp	r3, #0
-	ldr	ip, [r0, #8]
-	subgt	r3, r3, r1
-	addle	r3, r3, r1
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	asr	r1, r2, #3
-	asr	lr, r3, #3
-	addgt	r6, r6, ip
-	suble	r6, r6, ip
-	cmp	r3, #0
-	ldr	ip, [r0, #12]
-	subgt	r3, r3, r1
-	addle	r3, r3, r1
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	addgt	r6, r6, ip
-	asr	lr, r3, #4
-	suble	r6, r6, ip
-	ldr	r1, [r0, #16]
-	cmp	r3, #0
-	asr	ip, r2, #4
-	subgt	r3, r3, ip
-	addle	r3, r3, ip
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	asr	ip, r2, #5
-	asr	lr, r3, #5
-	addgt	r6, r6, r1
-	suble	r6, r6, r1
-	cmp	r3, #0
-	ldr	r1, [r0, #20]
-	subgt	r3, r3, ip
-	addle	r3, r3, ip
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	asr	ip, r2, #6
-	asr	lr, r3, #6
-	addgt	r6, r6, r1
-	suble	r6, r6, r1
-	cmp	r3, #0
-	ldr	r1, [r0, #24]
-	subgt	r3, r3, ip
-	addle	r3, r3, ip
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	asr	ip, r2, #7
-	asr	lr, r3, #7
-	addgt	r6, r6, r1
-	suble	r6, r6, r1
-	cmp	r3, #0
-	ldr	r1, [r0, #28]
-	subgt	r3, r3, ip
-	addle	r3, r3, ip
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	asr	ip, r2, #8
-	asr	lr, r3, #8
-	addgt	r6, r6, r1
-	suble	r6, r6, r1
-	movw	r7, #1244
-	cmp	r3, #0
-	ldr	r1, [r0, #32]
-	subgt	r3, r3, ip
-	addle	r3, r3, ip
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	asr	ip, r2, #9
-	addgt	r6, r6, r1
-	suble	r6, r6, r1
-	cmp	r3, #0
-	ldr	r1, [r0, #36]
-	asr	lr, r3, #9
-	subgt	r3, r3, ip
-	addle	r3, r3, ip
-	addgt	r2, r2, lr
-	suble	r2, r2, lr
-	addgt	r6, r6, r1
-	suble	r6, r6, r1
-	cmp	r3, #0
-	ldr	r1, [r0, #40]
-	asr	r0, r3, #10
-	asr	r8, r2, #10
-	addgt	r2, r0, r2
-	suble	r2, r2, r0
-	movw	r0, #:lower16:.LC1
-	mul	r2, r7, r2
-	subgt	r8, r3, r8
-	addle	r8, r8, r3
-	add	r8, r8, #1
-	asr	r7, r2, #13
-	asr	r8, r8, #2
-	addgt	r6, r1, r6
-	suble	r6, r6, r1
-	mov	r2, r8
-	mov	r1, r7
-	movt	r0, #:upper16:.LC1
-	bl	printf
-	movw	r0, #:lower16:.LC2
-	orr	r2, r7, r8, lsl #16
-	str	r2, [r5]
-	mov	r1, r2
-	movt	r0, #:upper16:.LC2
-	bl	printf
-	str	r6, [r4]
-	pop	{r4, r5, r6, r7, r8, pc}
+	ldrle	r3, [r0, #4]
+	ldrgt	r3, [r0, #4]
+	addle	r2, r1, ip, asr #1
+	subgt	r2, r1, ip, asr #1
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, ip, r1, asr #1
+	addgt	r1, ip, r1, asr #1
+	cmp	r2, #0
+	ldrle	r3, [r0, #8]
+	ldrgt	r3, [r0, #8]
+	addle	ip, r2, r1, asr #2
+	subgt	ip, r2, r1, asr #2
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, r1, r2, asr #2
+	addgt	r1, r1, r2, asr #2
+	cmp	ip, #0
+	ldrle	r3, [r0, #12]
+	ldrgt	r3, [r0, #12]
+	addle	r2, ip, r1, asr #3
+	subgt	r2, ip, r1, asr #3
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, r1, ip, asr #3
+	addgt	r1, r1, ip, asr #3
+	cmp	r2, #0
+	ldrle	r3, [r0, #16]
+	ldrgt	r3, [r0, #16]
+	addle	ip, r2, r1, asr #4
+	subgt	ip, r2, r1, asr #4
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, r1, r2, asr #4
+	addgt	r1, r1, r2, asr #4
+	cmp	ip, #0
+	ldrle	r3, [r0, #20]
+	ldrgt	r3, [r0, #20]
+	addle	r2, ip, r1, asr #5
+	subgt	r2, ip, r1, asr #5
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, r1, ip, asr #5
+	addgt	r1, r1, ip, asr #5
+	cmp	r2, #0
+	ldrle	r3, [r0, #24]
+	ldrgt	r3, [r0, #24]
+	addle	ip, r2, r1, asr #6
+	subgt	ip, r2, r1, asr #6
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, r1, r2, asr #6
+	addgt	r1, r1, r2, asr #6
+	cmp	ip, #0
+	ldrle	r3, [r0, #28]
+	ldrgt	r3, [r0, #28]
+	addle	r2, ip, r1, asr #7
+	subgt	r2, ip, r1, asr #7
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, r1, ip, asr #7
+	addgt	r1, r1, ip, asr #7
+	cmp	r2, #0
+	ldrle	r3, [r0, #32]
+	ldrgt	r3, [r0, #32]
+	addle	ip, r2, r1, asr #8
+	subgt	ip, r2, r1, asr #8
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	suble	r1, r1, r2, asr #8
+	addgt	r1, r1, r2, asr #8
+	cmp	ip, #0
+	ldrle	r3, [r0, #36]
+	ldrgt	r3, [r0, #36]
+	addle	r2, ip, r1, asr #9
+	subgt	r2, ip, r1, asr #9
+	suble	ip, r1, ip, asr #9
+	addgt	ip, r1, ip, asr #9
+	rsble	r4, r3, r4
+	addgt	r4, r4, r3
+	cmp	r2, #0
+	ldrgt	r3, [r0, #40]
+	ldrle	r3, [r0, #40]
+	subgt	r1, r2, ip, asr #10
+	addle	r1, r2, ip, asr #10
+	addgt	ip, ip, r2, asr #10
+	suble	ip, ip, r2, asr #10
+	addgt	r4, r4, r3
+	rsble	r4, r3, r4
+	mov	r2, ip, asl #5
+	mov	r3, ip, asl #3
+	add	r3, r3, r2
+	rsb	r3, ip, r3
+	mov	r3, r3, asl #3
+	rsb	r3, ip, r3
+	mov	r3, r3, asl #2
+	add	r2, r1, #1
+	mov	r2, r2, asr #2
+	mov	r3, r3, asr #13
+	orr	r3, r3, r2, asl #16
+	str	r3, [r5, #0]
+	str	r4, [r6, #0]
+	ldmfd	sp!, {r4, r5, r6}
+	bx	lr
+.L26:
+	.align	2
+.L25:
+	.word	z_table
 	.size	cordic_V_fixed_point, .-cordic_V_fixed_point
 	.comm	z_table,44,4
-	.section	.rodata.str1.4,"aMS",%progbits,1
-	.align	2
-.LC0:
-	.ascii	"unpacked x: %d   y: %d\012\000"
-.LC1:
-	.ascii	"after x: %d     y: %d\012\000"
-	.space	1
-.LC2:
-	.ascii	"xy: %X  (%d)\012\000"
-	.ident	"GCC: (GNU) 8.2.1 20180801 (Red Hat 8.2.1-2)"
+	.ident	"GCC: (Sourcery G++ Lite 2008q3-72) 4.3.2"
 	.section	.note.GNU-stack,"",%progbits

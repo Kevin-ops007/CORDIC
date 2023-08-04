@@ -1,0 +1,16 @@
+# started on Fri Aug  4 11:00:43 2023
+
+
+ Performance counter stats for 'qemu-arm ./cordic_neon.exe' (2000 runs):
+
+              4.61 msec task-clock:u              #    0.968 CPUs utilized            ( +-  0.02% )
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+             1,016      page-faults:u             #    0.220 M/sec                    ( +-  0.00% )
+        12,260,124      cycles:u                  #    2.658 GHz                      ( +-  0.02% )
+        22,180,863      instructions:u            #    1.81  insn per cycle           ( +-  0.00% )
+         3,851,506      branches:u                #  834.899 M/sec                    ( +-  0.00% )
+            74,181      branch-misses:u           #    1.93% of all branches          ( +-  0.02% )
+
+        0.00476582 +- 0.00000114 seconds time elapsed  ( +-  0.02% )
+
