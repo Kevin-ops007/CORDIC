@@ -40,6 +40,7 @@ void cordic_V_fixed_point(int *xy, int *z)
 
     printf("after x: %d     y: %d\n", x_temp_1, y_temp_1);
 
+    // Repack x and y into xy 
     *xy = y_temp_1 << 16 | x_temp_1;
     printf("xy: %X  (%d)\n", *xy, *xy);
     *z = z_temp;
