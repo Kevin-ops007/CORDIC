@@ -6,21 +6,21 @@ main_file="cordic_timing.c"
 # Get a list of all C files with the pattern cordic_V_*.c in the current directory
 c_files=(cordic_V_*.c)
 
-arm-linux-gcc -O1 cordic_timing.c cordic_V_standard.c -o cordic_O1_ex -lm
-arm-linux-gcc -O2 cordic_timing.c cordic_V_standard.c -o cordic_O2_ex -lm
+arm-linux-gcc -O1 -static cordic_timing.c cordic_V_standard.c -o cordic_O1.exe 
+arm-linux-gcc -O2 -static cordic_timing.c cordic_V_standard.c -o cordic_O2.exe
 
 for c_file in "${c_files[@]}"; do
     # Extract the part after "cordic_V_" from the C file name
     name=${c_file#cordic_V_}
     name=${name%.c}
-    output_executable="cordic_$name"+"_ex"
+    output_executable="cordic_$name.exe"
     arm_code="cordic_$name.s"
 
     # Skip cordic_V_32bit.c
     if [[ $c_file == "cordic_V_32bit.c" ]]; then
         # Generate the output executable name
         echo "COMPILING 32bit $c_file"
-        arm-linux-gcc -O3 cordic_timing32.c cordic_V_32bit.c -o cordic_32bit_ex -lm
+        arm-linux-gcc -O3 -static cordic_timing32.c cordic_V_32bit.c -o cordic_32bit.exe -lm
         arm-linux-gcc -O3 -S "$c_file" -o "$arm_code"
     elif [[ $c_file == "cordic_V_neon.c" ]]; then
         arm-linux-gcc -mfloat-abi=softfp -mfpu=neon -static -o "$output_executable" "$main_file" "$c_file"  -lm
@@ -28,18 +28,18 @@ for c_file in "${c_files[@]}"; do
     else
         echo "COMPILING $c_file"
         # Compile the files with arm-linux-gcc
-        arm-linux-gcc -O3 "$main_file" "$c_file" -o "$output_executable" -lm
+        arm-linux-gcc -O3 -static "$main_file" "$c_file" -o "$output_executable" -lm
         arm-linux-gcc -O3 -S "$c_file" -o "$arm_code"
         
     fi
 done
 
 rm -f ./assembly/*.s 
-rm -f ./executables/*_ex
+rm -f ./executables/*.exe
 rm -f ./executables/*.txt
 
 mv *.s ./assembly
-mv *_ex ./executables
+mv *.exe ./executables
 
 cd executables
 
