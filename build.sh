@@ -31,7 +31,7 @@ for c_file in "${c_files[@]}"; do
         echo "COMPILING $c_file"
         # Compile the files with arm-linux-gcc
         arm-linux-gcc -O3 -static "$main_file" "$c_file" -o "$output_executable" -std=c99
-        arm-linux-gcc -O3 -S "$c_file" -o "$arm_code"
+        arm-linux-gcc -O3 -S "$c_file" -o "$arm_code" -std=c99
     fi
 done
 

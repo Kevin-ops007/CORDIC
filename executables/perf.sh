@@ -9,7 +9,7 @@ for filename in *.exe; do
         file="${filename%.exe}"
         echo "Running perf for file: $filename"
         echo "Running perf for file : $filename" >> stats.txt
-        perf stat -o "$file".txt --repeat=2  qemu-arm ./"$filename" 
+        perf stat -o "$file".txt --repeat=2000  qemu-arm ./"$filename" 
         grep "( +-" "$file".txt >> stats.txt
         
         echo "perf for file $filename completed."
