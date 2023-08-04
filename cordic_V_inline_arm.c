@@ -15,11 +15,11 @@ void cordic_V_fixed_point(int *x, int *y, int *z)
         /* 11 iterations are needed */
         sign = y_temp_1 > 0 ? 1 : -1;
         __asm__ __volatile__("MLA %[output_i], %[input_i], %[input_j]"
-        :[output_i] "r" (x_temp_2)
+        :[output_i] "=r" (x_temp_2)
         : [input_i] "r" (sign), [input_j] "r" (y_temp_1 >> i)
         );
         __asm__ __volatile__("MLS %[output_i], %[input_i], %[input_j]"
-        :[output_i] "r" (y_temp_2)
+        :[output_i] "=r" (y_temp_2)
         : [input_i] "r" (sign), [input_j] "r" (x_temp_1 >> i)
         );
         z_temp += sign * z_table[i];
