@@ -19,3 +19,11 @@ simulate with
 ```
 qemu-arm <executable>
 ```
+
+## Assembly Code 
+
+All assembly code is located in the assembly folder.
+
+## Executables and Perf Measurements
+
+All executable file and perf measurements are located in the executable folder.
