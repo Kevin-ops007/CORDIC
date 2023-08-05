@@ -31,10 +31,10 @@ cordic_V_fixed_point:
 	mvnle	lr, #0
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r3, ip
+	mla r6, lr, r3, ip
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS ip, lr, ip, r3
+	mls ip, lr, ip, r3
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -49,10 +49,10 @@ cordic_V_fixed_point:
 	asr	r5, r6, #1
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS r5, lr, r5, ip
+	mls r5, lr, r5, ip
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -65,10 +65,10 @@ cordic_V_fixed_point:
 	asr	ip, r6, #2
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS ip, lr, ip, r5
+	mls ip, lr, ip, r5
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -81,10 +81,10 @@ cordic_V_fixed_point:
 	asr	r5, r6, #3
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS ip, lr, r5, ip
+	mls ip, lr, r5, ip
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -97,10 +97,10 @@ cordic_V_fixed_point:
 	asr	r5, r6, #4
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS r5, lr, r5, ip
+	mls r5, lr, r5, ip
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -113,10 +113,10 @@ cordic_V_fixed_point:
 	asr	ip, r6, #5
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS r5, lr, ip, r5
+	mls r5, lr, ip, r5
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -129,10 +129,10 @@ cordic_V_fixed_point:
 	asr	ip, r6, #6
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS ip, lr, ip, r5
+	mls ip, lr, ip, r5
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -145,10 +145,10 @@ cordic_V_fixed_point:
 	asr	r5, r6, #7
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS ip, lr, r5, ip
+	mls ip, lr, r5, ip
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -161,10 +161,10 @@ cordic_V_fixed_point:
 	asr	r5, r6, #8
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r7, r6
+	mla r6, lr, r7, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS r5, lr, r5, ip
+	mls r5, lr, r5, ip
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -177,10 +177,10 @@ cordic_V_fixed_point:
 	asr	ip, r6, #9
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r4, r7, r4, r6
+	mla r4, r7, r4, r6
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS r5, r7, ip, r5
+	mls r5, r7, ip, r5
 @ 0 "" 2
 	.arm
 	.syntax unified
@@ -193,10 +193,10 @@ cordic_V_fixed_point:
 	asr	ip, r4, #10
 	.syntax divided
 @ 19 "cordic_V_inline_arm.c" 1
-	MLA r6, lr, r6, r4
+	mla r6, lr, r6, r4
 @ 0 "" 2
 @ 23 "cordic_V_inline_arm.c" 1
-	MLS ip, lr, ip, r5
+	mls ip, lr, ip, r5
 @ 0 "" 2
 	.arm
 	.syntax unified
